@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Sourabrata Samanta</div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="margin-top: 70px;">
+        <section class="about-hero">
+            <div class="container">
+                <h1>About Me</h1>
+                <p class="about-subtitle">Passionate developer building the future, one line of code at a time</p>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>My Story</h2>
+                        <p>I'm a software developer with a passion for creating innovative solutions that make a difference. My journey in tech started [your story here], and I've been fascinated by the power of technology to solve real-world problems ever since.</p>
+                        
+                        <p>Currently, I specialize in [your specialization] and enjoy working with modern technologies like [your tech stack]. I'm particularly interested in [your interests] and love collaborating with teams to build scalable, user-friendly applications.</p>
+
+                        <h3>What I Do</h3>
+                        <ul class="skills-list">
+                            <li>Full-stack web development</li>
+                            <li>Cloud architecture and deployment</li>
+                            <li>API design and development</li>
+                            <li>Database design and optimization</li>
+                            <li>DevOps and CI/CD implementation</li>
+                        </ul>
+
+                        <h3>Work History</h3>
+                        <div class="work-history">
+                            <div class="work-item">
+                                <h4>Job Title</h4>
+                                <p class="work-company">Company Name</p>
+                                <p class="work-dates">Month Year - Present</p>
+                                <p class="work-description">Brief description of your role and key accomplishments.</p>
+                            </div>
+                            <div class="work-item">
+                                <h4>Previous Job Title</h4>
+                                <p class="work-company">Previous Company</p>
+                                <p class="work-dates">Month Year - Month Year</p>
+                                <p class="work-description">Brief description of your role and key accomplishments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-sidebar">
+                        <div class="profile-image">
+                            <img src="/Users/sourbratasamanta/Downloads/technical-portfolio-main/instructor-example/images/profile.jpg" alt="Your Name" />
+                        </div>
+                        
+                        <div class="tech-stack">
+                            <h3>Technologies I Use</h3>
+                            <div class="tech-grid">
+                                <span class="tech-item">JavaScript</span>
+                                <span class="tech-item">Python</span>
+                                <span class="tech-item">React</span>
+                                <span class="tech-item">Node.js</span>
+                                <span class="tech-item">AWS</span>
+                                <span class="tech-item">Docker</span>
+                                <span class="tech-item">PostgreSQL</span>
+                                <span class="tech-item">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        :root {
+            --accent-purple: #7c3aed; /* new purple accent (replaces pink accents) */
+        }
+
+        .about-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .about-content {
+            padding: 80px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #1e293b;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: #1e293b;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skills-list li {
+            padding: 0.5rem 0;
+            color: #64748b;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .skills-list li:before {
+            content: "→";
+            color: var(--accent-purple);
+            position: absolute;
+            left: 0;
+        }
+
+        .work-history {
+            margin-top: 1rem;
+        }
+
+        .work-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .work-item:last-child {
+            border-bottom: none;
+        }
+
+        .work-item h4 {
+            font-size: 1.2rem;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+        }
+
+        .work-company {
+            color: var(--accent-purple);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .work-dates {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .work-description {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .profile-image {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .tech-stack h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+
+        .tech-item {
+            background: #e2e8f0;
+            color: #475569;
+            padding: 0.5rem;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            navMenu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Sourabrata Samanta</div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="margin-top: 70px;">
+        <section class="blog-hero">
+            <div class="container">
+                <h1>Technical Blog</h1>
+                <p class="blog-subtitle">Sharing insights, tutorials, and lessons learned from my development journey</p>
+            </div>
+        </section>
+
+        <section class="blog-content">
+            <div class="container">
+                <div class="blog-grid">
+                    <article class="blog-post">
+                        <div class="post-meta">
+                            <span class="post-date">March 15, 2024</span>
+                            <span class="post-category">Tutorial</span>
+                        </div>
+                        <h2><a href="#">Building Scalable APIs with Node.js and Express</a></h2>
+                        <p class="post-excerpt">Learn how to structure and build RESTful APIs that can handle growth, including best practices for error handling, authentication, and database optimization.</p>
+                        <div class="post-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">API Design</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="post-meta">
+                            <span class="post-date">March 8, 2024</span>
+                            <span class="post-category">AWS</span>
+                        </div>
+                        <h2><a href="#">Deploying React Apps to AWS with CI/CD</a></h2>
+                        <p class="post-excerpt">A complete guide to setting up automated deployments for React applications using AWS services like S3, CloudFront, and CodePipeline.</p>
+                        <div class="post-tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">React</span>
+                            <span class="tag">CI/CD</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="post-meta">
+                            <span class="post-date">February 28, 2024</span>
+                            <span class="post-category">Career</span>
+                        </div>
+                        <h2><a href="#">Lessons from My First Year as a Developer</a></h2>
+                        <p class="post-excerpt">Reflections on the challenges, victories, and key learnings from transitioning into a software development career.</p>
+                        <div class="post-tags">
+                            <span class="tag">Career</span>
+                            <span class="tag">Learning</span>
+                            <span class="tag">Reflection</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="post-meta">
+                            <span class="post-date">February 20, 2024</span>
+                            <span class="post-category">Tutorial</span>
+                        </div>
+                        <h2><a href="#">Understanding JavaScript Closures with Practical Examples</a></h2>
+                        <p class="post-excerpt">Demystifying one of JavaScript's most important concepts with real-world examples and use cases that every developer should know.</p>
+                        <div class="post-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Fundamentals</span>
+                            <span class="tag">Tutorial</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="post-meta">
+                            <span class="post-date">February 12, 2024</span>
+                            <span class="post-category">Tools</span>
+                        </div>
+                        <h2><a href="#">My Development Setup: Tools and Workflows</a></h2>
+                        <p class="post-excerpt">A detailed look at the tools, extensions, and workflows I use daily to stay productive as a software developer.</p>
+                        <div class="post-tags">
+                            <span class="tag">Productivity</span>
+                            <span class="tag">Tools</span>
+                            <span class="tag">Workflow</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </article>
+                </div>
+
+                <div class="blog-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="#">Tutorial <span>(8)</span></a></li>
+                            <li><a href="#">AWS <span>(5)</span></a></li>
+                            <li><a href="#">Career <span>(3)</span></a></li>
+                            <li><a href="#">Tools <span>(4)</span></a></li>
+                            <li><a href="#">JavaScript <span>(6)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Recent Posts</h3>
+                        <ul class="recent-posts">
+                            <li><a href="#">Building Scalable APIs with Node.js</a></li>
+                            <li><a href="#">Deploying React Apps to AWS</a></li>
+                            <li><a href="#">Lessons from My First Year</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Subscribe</h3>
+                        <p>Get notified when I publish new articles</p>
+                        <form class="subscribe-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sourabrata Samanta. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            padding: 80px 0;
+        }
+
+        .blog-content .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .blog-post {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid #2563eb;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .post-date {
+            color: #64748b;
+        }
+
+        .post-category {
+            background: #2563eb;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+
+        .blog-post h2 {
+            margin-bottom: 1rem;
+        }
+
+        .blog-post h2 a {
+            color: #1e293b;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .blog-post h2 a:hover {
+            color: #2563eb;
+        }
+
+        .post-excerpt {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #e2e8f0;
+            color: #475569;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+        }
+
+        .read-more {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .blog-sidebar {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 10px;
+            height: fit-content;
+        }
+
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .sidebar-section h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .category-list {
+            list-style: none;
+        }
+
+        .category-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .category-list a {
+            color: #64748b;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .category-list a:hover {
+            color: #2563eb;
+        }
+
+        .recent-posts {
+            list-style: none;
+        }
+
+        .recent-posts li {
+            margin-bottom: 0.75rem;
+        }
+
+        .recent-posts a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .recent-posts a:hover {
+            color: #2563eb;
+        }
+
+        .subscribe-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .subscribe-form input {
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .subscribe-form input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .subscribe-form .btn {
+            padding: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-content .container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .post-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            navMenu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

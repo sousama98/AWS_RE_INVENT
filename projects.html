@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Sourabrata Samanta</div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="margin-top: 70px;">
+        <section class="projects-hero">
+            <div class="container">
+                <h1>My Projects</h1>
+                <p class="projects-subtitle">A showcase of my technical work and problem-solving approach</p>
+            </div>
+        </section>
+
+        <section class="projects-content">
+            <div class="container">
+                <div class="projects-grid">
+
+                
+
+                    <div class="project-card-detailed">
+                        <div class="project-info">
+                            <h3>Premium Subscriber Conversion Prediction</h3>
+                            <p class="project-description">This initiative centers on developing a data-driven engine capable of forecasting freemium-to-premium conversion behavior across a user base of more than 58,000 records. Leveraging R, the project integrates exploratory data analysis, causal inference, and advanced machine-learning methodologies to deliver actionable insights for customer lifecycle optimization.</p>
+                            
+                            <div class="project-details">
+                                <h4>Problem Solved</h4>
+                                <p>Provided data-backed predictions of conversion probability to help teams target high-value users, personalize onboarding flows, and optimize resource allocation for subscription growth.</p>
+                                
+                                <h4>Technical Approach</h4>
+                                <ol>
+                                    <li><strong>Data Engineering & Exploration</strong> — Cleaned, transformed, and validated a dataset of 58k+ user interactions. Performed EDA and causal inference checks to surface real drivers of conversion.</li>
+                                    <li><strong>Feature Strategy</strong> — Engineered features from engagement intensity, session timing, activity breadth, and demographics. Applied feature selection and used oversampling (SMOTE) to address class imbalance.</li>
+                                    <li><strong>Model Development</strong> — Built and tuned Logistic Regression, Random Forest, and Gradient Boosting (GBM/XGBoost) models using cross-validation, grid search, and threshold optimization.</li>
+                                    <li><strong>Evaluation & Insights</strong> — Benchmarked models, derived user-behavior clusters, and produced actionable levers for product and marketing teams.</li>
+                                </ol>
+                                
+                                <h4>Key Learnings</h4>
+                                <p>Deepened expertise in classification workflows and ensemble techniques, strengthened causal analysis practices, gained hands-on experience with balancing and hyperparameter tuning, and improved translating analytics into business recommendations.</p>
+                            </div>
+                            
+                            <div class="project-tech">
+                                <span class="tech-tag">R (tidyverse, caret, randomForest, xgboost)</span>
+                                <span class="tech-tag">Machine Learning (Classification & Clustering)</span>
+                                <span class="tech-tag">Causal Inference & Statistical Modeling</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-detailed">
+                        <div class="project-info">
+                            <h3>Seoul Bike Sharing Demand Analysis</h3>
+                            <p class="project-description">This project focuses on building an intelligent forecasting engine to predict daily bike rental demand across 8,700+ records from the Seoul public bike system. Using a Python-based analytics pipeline integrated with a relational database, the initiative delivers high-fidelity predictions that support capacity planning, resource allocation, and operational optimization for urban mobility services.</p>
+                            
+                            <div class="project-details">
+                                <h4>Problem Solved</h4>
+                                <p>Provided a data-driven demand prediction model to enable better fleet distribution, maintenance scheduling, and strategic planning—reducing overstocking and underresourcing across stations.</p>
+                                
+                                <h4>Technical Approach</h4>
+                                <ol>
+                                    <li><strong>Data Pipeline & Engineering</strong> — Ingested and managed data through a relational database; executed Python-based wrangling and preprocessing; conducted EDA to evaluate environmental, temporal, and behavioral factors.</li>
+                                    <li><strong>Feature Development & Preparation</strong> — Engineered features for temperature, humidity, time-of-day, holidays, and wind speed; handled outliers, normalization, and rigorous validation.</li>
+                                    <li><strong>Predictive Modeling</strong> — Implemented Linear Regression, Random Forest Regression, and Gradient Boosting models; optimized via hyperparameter tuning and cross-validation with evaluation on RMSE, MAE, and R².</li>
+                                    <li><strong>Insights & Deliverables</strong> — Produced analytical reports, identified peak-hour trends, and delivered recommendations for station-level planning and system optimization.</li>
+                                </ol>
+                                
+                                <h4>Key Learnings</h4>
+                                <p>Strengthened Python analytics and regression modeling skills, improved database integration workflows, and enhanced data storytelling to turn model outputs into actionable operational guidance.</p>
+                            </div>
+                            
+                            <div class="project-tech">
+                                <span class="tech-tag">Python (pandas, NumPy, scikit-learn)</span>
+                                <span class="tech-tag">SQL / Relational Databases</span>
+                                <span class="tech-tag">Regression & Predictive Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-detailed">
+                        <div class="project-info">
+                            <h3>PwC Capstone Consultant: Building Process-Specific Models with Human Knowledge</h3>
+                            <p class="project-description">A 13-week capstone blueprint combining explainable AI, process mining, and human-in-the-loop feedback to build process-specific, transparent AI models for enterprise workflows.</p>
+                            
+                            <div class="project-details">
+                                <h4>Problem Solved</h4>
+                                <p>Addresses enterprise adoption barriers such as lack of transparency, misalignment with domain expertise, and fragmented event-log data by designing a human-aligned machine intelligence framework that balances performance with operational constraints.</p>
+                                
+                                <h4>Technical Approach</h4>
+                                <ol>
+                                    <li><strong>Research Foundations</strong> — Deep-dive into Explainable AI (XAI), process mining from event logs, and SME feedback frameworks to form a rigorous blueprint.</li>
+                                    <li><strong>Blueprint Architecture</strong> — Structured 13-week roadmap across four pillars: Data Understanding & Event Log Assessment; Model Development & Explainability Integration; Human-Knowledge Integration Cycles; Governance, Monitoring & Scalability.</li>
+                                    <li><strong>Implementation Strategy</strong> — Recommended tooling for process mining and XAI visualization, model training cycles adapted to process maturity, and a monitoring plan for transparency and drift detection.</li>
+                                </ol>
+                                
+                                <h4>Key Learnings</h4>
+                                <p>Advanced XAI and process-mining knowledge, strengthened design of human-in-the-loop systems, and improved ability to translate technical research into enterprise-ready operational frameworks.</p>
+                            </div>
+                            
+                            <div class="project-tech">
+                                <span class="tech-tag">Explainable AI (XAI) Frameworks</span>
+                                <span class="tech-tag">Process Mining & Event-Log Analytics</span>
+                                <span class="tech-tag">Human-in-the-Loop Feedback Systems</span>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sourabrata Samanta. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        :root {
+            --accent-purple: #7c3aed; /* new purple accent (replaces pink accents) */
+        }
+
+        .projects-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .projects-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .projects-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .projects-content {
+            padding: 80px 0;
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .project-card-detailed {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .project-info {
+            padding: 2rem;
+        }
+
+        .project-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .project-description {
+            color: #64748b;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .project-details h4 {
+            color: #1e293b;
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1rem;
+        }
+
+        .project-details p {
+            color: #64748b;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Replace button/promo accents with purple */
+        .project-links .btn.btn-primary {
+            background: var(--accent-purple);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+        }
+
+        .project-links .btn.btn-secondary {
+            background: transparent;
+            color: var(--accent-purple);
+            border: 1px solid var(--accent-purple);
+            border-radius: 6px;
+        }
+
+        @media (max-width: 768px) {
+            .projects-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .project-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            navMenu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
