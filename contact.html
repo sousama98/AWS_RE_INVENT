@@ -19,7 +19,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog.html">Work</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </div>
@@ -43,60 +43,56 @@
                         <div class="contact-methods">
                             <div class="contact-method">
                                 <h3>📧 Email</h3>
-                                <p>your.email@example.com</p>
+                                <p><a href="mailto:soursama@iu.edu">soursama@iu.edu</a></p>
                             </div>
                             
                             <div class="contact-method">
                                 <h3>💼 LinkedIn</h3>
-                                <p><a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
+                                <p><a href="https://www.linkedin.com/in/sour-samanta/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/sour-samanta/</a></p>
                             </div>
                             
                             <div class="contact-method">
                                 <h3>🐙 GitHub</h3>
-                                <p><a href="https://github.com/yourusername">github.com/yourusername</a></p>
+                                <p><a href="https://github.com/sousama98" target="_blank" rel="noopener noreferrer">github.com/sousama98</a></p>
                             </div>
                             
                             <div class="contact-method">
-                                <h3>🐦 Twitter</h3>
-                                <p><a href="https://twitter.com/yourusername">@yourusername</a></p>
+                                <h3>📞 Phone</h3>
+                                <p><a href="tel:+18126793078">+1 (812) 679-3078</a></p>
                             </div>
                         </div>
                         
                         <div class="availability">
                             <h3>Current Status</h3>
                             <p class="status-badge">🟢 Available for new opportunities</p>
-                            <p>I'm currently looking for full-time opportunities in software development, particularly roles involving cloud technologies and modern web development.</p>
+                        </div>
+
+                        <div class="preferred-roles">
+                            <h3>Target Roles</h3>
+                            <div class="role-grid">
+                                <div class="role-tile" tabindex="0">
+                                    <h4>Data Science</h4>
+                                    <p>Modeling, experimentation, and production ML workflows.</p>
+                                </div>
+
+                                <div class="role-tile" tabindex="0">
+                                    <h4>Data Analytics</h4>
+                                    <p>Self-serve BI, dashboards, and stakeholder-driven insights.</p>
+                                </div>
+
+                                <div class="role-tile" tabindex="0">
+                                    <h4>Technology Consulting</h4>
+                                    <p>Strategy, vendor selection, and cloud-native solution design.</p>
+                                </div>
+
+                                <div class="role-tile" tabindex="0">
+                                    <h4>Product Management</h4>
+                                    <p>Roadmaps, prioritization, and delivering measurable outcomes.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="contact-form">
-                        <h2>Send a Message</h2>
-                        <form action="#" method="POST">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="6" required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
-                        
-                        <p class="form-note">Note: This form requires backend integration. For the workshop, participants can use services like Formspree or Netlify Forms.</p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -132,9 +128,17 @@
 
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: 1fr; /* full width single column */
+            gap: 2.5rem;
             align-items: start;
+        }
+
+        /* ensure the contact section container can use the full page width */
+        .contact-content .container {
+            max-width: 100%;
+            width: 100%;
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
 
         .contact-info h2,
@@ -152,89 +156,107 @@
 
         .contact-methods {
             margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
         }
 
         .contact-method {
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background: #f8fafc;
-            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.25rem;
+            padding: 1.25rem;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid rgba(15, 23, 42, 0.04);
+            box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+            transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
+            min-height: 96px;
         }
 
-        .contact-method h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: #1e293b;
-        }
-
-        .contact-method p {
-            margin: 0;
-            color: #64748b;
+        /* hover / focus styles (lavender accent) */
+        .contact-method:hover,
+        .contact-method:focus-within {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 18px 40px rgba(124,58,237,0.12);
+            background: linear-gradient(135deg, #f3e8ff 0%, #eef2ff 100%);
+            border-color: rgba(124,58,237,0.12);
         }
 
         .contact-method a {
-            color: #2563eb;
+            color: #1f2937;
+            font-weight: 600;
             text-decoration: none;
         }
 
-        .contact-method a:hover {
+        .contact-method a:hover,
+        .contact-method a:focus {
             text-decoration: underline;
         }
 
-        .availability h3 {
-            color: #1e293b;
-            margin-bottom: 1rem;
+        /* keyboard focus visible */
+        .contact-method:focus-within {
+            outline: 3px solid rgba(124,58,237,0.14);
+            outline-offset: 4px;
         }
 
-        .status-badge {
-            background: #dcfce7;
-            color: #166534;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            display: inline-block;
-            margin-bottom: 1rem;
-            font-weight: 600;
+        /* preferred roles tiles */
+        .preferred-roles {
+            margin-top: 1.5rem;
         }
 
-        .contact-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        .preferred-roles h3 {
+            margin-bottom: 0.75rem;
+            color: #0f172a;
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
+        .role-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 0.5rem;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #1e293b;
-            font-weight: 600;
+        .role-tile {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1rem;
+            border: 1px solid rgba(15,23,42,0.04);
+            box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+            transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
+            min-height: 96px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.25rem;
+            cursor: default;
         }
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
+        .role-tile h4 {
+            margin: 0;
+            font-size: 1.05rem;
+            color: #0f172a;
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus {
+        .role-tile p {
+            margin: 0;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .role-tile:hover,
+        .role-tile:focus {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 18px 40px rgba(124,58,237,0.12);
+            background: linear-gradient(135deg, #f3e8ff 0%, #eef2ff 100%);
+            border-color: rgba(124,58,237,0.12);
             outline: none;
-            border-color: #2563eb;
         }
 
-        .form-note {
-            margin-top: 1rem;
-            font-size: 0.875rem;
-            color: #64748b;
-            font-style: italic;
+        .role-tile:focus {
+            outline: 3px solid rgba(124,58,237,0.14);
+            outline-offset: 4px;
         }
 
         @media (max-width: 768px) {
@@ -245,6 +267,12 @@
             
             .contact-hero h1 {
                 font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-methods {
+                grid-template-columns: 1fr;
             }
         }
     </style>

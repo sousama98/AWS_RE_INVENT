@@ -1,367 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Your Name</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Work Experience - Sourabrata Samanta</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* logo / work-item fixes */
+    .logo-wrap {
+      width: 110px;               /* fixed box the logo sits in */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      box-sizing: border-box;
+      overflow: hidden;           /* prevent logos from overflowing their box */
+      background: #fff;
+      border-radius: 8px;
+    }
+
+    .company-logo {
+      max-width: 100%;
+      max-height: 84px;          /* constrain height but allow natural width */
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* ensure work items align nicely */
+    .work-item {
+      align-items: center;
+      background: #fbfbff; /* light card background */
+      transition: box-shadow 180ms ease, transform 160ms ease;
+    }
+    
+    .work-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(2,6,23,0.08);
+    }
+    
+    /* Mphasis: add a skills column on wide screens */
+    .work-item--with-skills {
+      grid-template-columns: auto 1fr 260px; /* logo | content | skills (skills column on the right) */
+      align-items: start;
+      gap: 1rem;
+    }
+
+    /* ensure skills column aligns to top and stays compact */
+    .mphasis-skills {
+      align-self: start;
+      justify-content: flex-start;
+      padding-left: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .mphasis-skills h4 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1rem;
+      color: #0f172a;
+    }
+
+    .skill-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+
+    .skill-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      background: #ffffff;
+      border: 1px solid rgba(15,23,42,0.06);
+      padding: 0.5rem 0.75rem;
+      border-radius: 10px;
+      text-align: left;
+      font-weight: 600;
+      color: #0f172a;
+      cursor: default; /* visually not interactive */
+      transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+    }
+
+    .skill-btn:hover,
+    .skill-btn:focus {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 14px 36px rgba(124,58,237,0.10);
+      background: linear-gradient(90deg, #f3e8ff 0%, #e6e6fa 100%); /* lavender */
+      outline: none;
+    }
+
+    @media (max-width: 768px) {
+      .logo-wrap { width: 80px; padding: 4px; }
+      .company-logo { max-height: 56px; }
+      .work-item { grid-template-columns: 72px 1fr; gap: 0.75rem; }
+      .work-item--with-skills { grid-template-columns: auto 1fr; }
+      .mphasis-skills { grid-column: 1 / -1; margin-top: 1rem; padding-left: 0; }
+      .skill-list { flex-direction: row; flex-wrap: wrap; gap: 0.5rem; }
+      .skill-btn { min-width: 120px; }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Sourabrata Samanta</div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Sourabrata Samanta</div>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html" class="active">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main style="margin-top:70px;">
+    <section class="work-hero" style="text-align:center;padding:80px 0;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;">
+      <div class="container">
+        <h1 style="font-size:2.5rem;margin-bottom:0.5rem;">Work Experience</h1>
+        <p style="opacity:0.95;margin:0;">Experience focused on cloud-native systems, ML/AI engineering, data platforms and product delivery.</p>
+      </div>
+    </section>
+
+    <section class="work-list" style="padding:60px 0;">
+      <div class="container" style="max-width:1100px;margin:0 auto;">
+        <!-- Mphasis -->
+        <article class="work-item work-item--with-skills" style="display:grid;gap:1rem;padding:1.25rem;border-radius:10px;border:1px solid rgba(15,23,42,0.04);box-shadow:0 6px 18px rgba(2,6,23,0.04);margin-bottom:1rem;">
+          <div class="logo-wrap">
+            <img src="assets/logos/mphasis.png" alt="Mphasis" class="company-logo">
+          </div>
+          <div>
+            <h3 style="margin:0 0 0.25rem 0;">Mphasis</h3>
+            <p style="margin:0;font-weight:600;color:#0f172a;">Role: Data Science Intern</p>
+            <p style="margin:0.25rem 0;color:#475569;font-size:0.95rem;">Dates: May 2025 - August 2025</p>
+            <p style="margin:0.5rem 0 0 0;color:#475569;font-size:0.95rem;">
+              At Mphasis, I worked at the intersection of AI engineering, cloud architecture, and data analytics—building production-grade systems that directly supported enterprise Vendor Risk workflows. My primary focus was designing and deploying scalable, high-precision AI solutions using AWS, Python, LLMs, and modern data engineering practices.
+            </p>
+            <ul style="margin:0.75rem 0 0 1.15rem;color:#475569">
+              <li>Built TracyAI — an AI-powered Vendor Risk Management platform that automated third‑party risk assessments end‑to‑end, reducing analyst evaluation time by ~75% through multimodal data processing, embeddings, and LLM-driven extraction.</li>
+              <li>Engineered a multimodal RAG pipeline on Amazon Bedrock using Python, AWS (S3, Glue, SageMaker, Bedrock), Hugging Face, and LangChain/LangGraph to enable intelligent search and reasoning across text, tables, and images; improved data integration efficiency by ~60% and removed manual bottlenecks.</li>
+              <li>Fine-tuned LLMs and implemented Titan embeddings to extract structured insights from large unstructured vendor datasets, cutting month‑long processing cycles to under 7 days while improving consistency and accuracy.</li>
+              <li>Designed executive KPI dashboards (Power BI, Tableau) backed by Snowflake and Python pipelines to surface vendor scores, risk flags, and model outputs in near real‑time — improving decision speed by ~40%.</li>
+              <li>Automated model deployment and data workflows with CI/CD, Docker, and GitHub; improved release frequency by ~40% and increased production reliability using scalable pipelines and containerized deployments.</li>
+              <li>Implemented monitoring and observability for data and model health (logs, metrics, alerts) and optimized inference cost/performance across AWS services.</li>
+              <li>Collaborated with cross‑functional ML, data engineering, and product teams to ship features rapidly, own end‑to‑end components, and ensure alignment on scalability, governance, and system performance.</li>
             </ul>
-        </div>
-    </nav>
-
-    <main style="margin-top: 70px;">
-        <section class="blog-hero">
-            <div class="container">
-                <h1>Technical Blog</h1>
-                <p class="blog-subtitle">Sharing insights, tutorials, and lessons learned from my development journey</p>
+          </div>
+          <div class="mphasis-skills" aria-hidden="false">
+            <h4>Skills used</h4>
+            <div class="skill-list">
+              <button class="skill-btn" type="button" onclick="return false;">Python</button>
+              <button class="skill-btn" type="button" onclick="return false;">AWS (S3, EC2, Lambda)</button>
+              <button class="skill-btn" type="button" onclick="return false;">SageMaker</button>
+              <button class="skill-btn" type="button" onclick="return false;">Amazon Bedrock</button>
+              <button class="skill-btn" type="button" onclick="return false;">Hugging Face</button>
+              <button class="skill-btn" type="button" onclick="return false;">LangChain / LangGraph</button>
+              <button class="skill-btn" type="button" onclick="return false;">Titan embeddings</button>
+              <button class="skill-btn" type="button" onclick="return false;">RAG pipelines</button>
+              <button class="skill-btn" type="button" onclick="return false;">Snowflake</button>
+              <button class="skill-btn" type="button" onclick="return false;">Databricks</button>
+              <button class="skill-btn" type="button" onclick="return false;">Power BI / Tableau</button>
+              <button class="skill-btn" type="button" onclick="return false;">Docker / CI-CD</button>
+              <button class="skill-btn" type="button" onclick="return false;">Monitoring & Observability</button>
             </div>
-        </section>
+          </div>
+        </article>
 
-        <section class="blog-content">
-            <div class="container">
-                <div class="blog-grid">
-                    <article class="blog-post">
-                        <div class="post-meta">
-                            <span class="post-date">March 15, 2024</span>
-                            <span class="post-category">Tutorial</span>
-                        </div>
-                        <h2><a href="#">Building Scalable APIs with Node.js and Express</a></h2>
-                        <p class="post-excerpt">Learn how to structure and build RESTful APIs that can handle growth, including best practices for error handling, authentication, and database optimization.</p>
-                        <div class="post-tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Express</span>
-                            <span class="tag">API Design</span>
-                        </div>
-                        <a href="#" class="read-more">Read More →</a>
-                    </article>
-
-                    <article class="blog-post">
-                        <div class="post-meta">
-                            <span class="post-date">March 8, 2024</span>
-                            <span class="post-category">AWS</span>
-                        </div>
-                        <h2><a href="#">Deploying React Apps to AWS with CI/CD</a></h2>
-                        <p class="post-excerpt">A complete guide to setting up automated deployments for React applications using AWS services like S3, CloudFront, and CodePipeline.</p>
-                        <div class="post-tags">
-                            <span class="tag">AWS</span>
-                            <span class="tag">React</span>
-                            <span class="tag">CI/CD</span>
-                        </div>
-                        <a href="#" class="read-more">Read More →</a>
-                    </article>
-
-                    <article class="blog-post">
-                        <div class="post-meta">
-                            <span class="post-date">February 28, 2024</span>
-                            <span class="post-category">Career</span>
-                        </div>
-                        <h2><a href="#">Lessons from My First Year as a Developer</a></h2>
-                        <p class="post-excerpt">Reflections on the challenges, victories, and key learnings from transitioning into a software development career.</p>
-                        <div class="post-tags">
-                            <span class="tag">Career</span>
-                            <span class="tag">Learning</span>
-                            <span class="tag">Reflection</span>
-                        </div>
-                        <a href="#" class="read-more">Read More →</a>
-                    </article>
-
-                    <article class="blog-post">
-                        <div class="post-meta">
-                            <span class="post-date">February 20, 2024</span>
-                            <span class="post-category">Tutorial</span>
-                        </div>
-                        <h2><a href="#">Understanding JavaScript Closures with Practical Examples</a></h2>
-                        <p class="post-excerpt">Demystifying one of JavaScript's most important concepts with real-world examples and use cases that every developer should know.</p>
-                        <div class="post-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Fundamentals</span>
-                            <span class="tag">Tutorial</span>
-                        </div>
-                        <a href="#" class="read-more">Read More →</a>
-                    </article>
-
-                    <article class="blog-post">
-                        <div class="post-meta">
-                            <span class="post-date">February 12, 2024</span>
-                            <span class="post-category">Tools</span>
-                        </div>
-                        <h2><a href="#">My Development Setup: Tools and Workflows</a></h2>
-                        <p class="post-excerpt">A detailed look at the tools, extensions, and workflows I use daily to stay productive as a software developer.</p>
-                        <div class="post-tags">
-                            <span class="tag">Productivity</span>
-                            <span class="tag">Tools</span>
-                            <span class="tag">Workflow</span>
-                        </div>
-                        <a href="#" class="read-more">Read More →</a>
-                    </article>
-                </div>
-
-                <div class="blog-sidebar">
-                    <div class="sidebar-section">
-                        <h3>Categories</h3>
-                        <ul class="category-list">
-                            <li><a href="#">Tutorial <span>(8)</span></a></li>
-                            <li><a href="#">AWS <span>(5)</span></a></li>
-                            <li><a href="#">Career <span>(3)</span></a></li>
-                            <li><a href="#">Tools <span>(4)</span></a></li>
-                            <li><a href="#">JavaScript <span>(6)</span></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <h3>Recent Posts</h3>
-                        <ul class="recent-posts">
-                            <li><a href="#">Building Scalable APIs with Node.js</a></li>
-                            <li><a href="#">Deploying React Apps to AWS</a></li>
-                            <li><a href="#">Lessons from My First Year</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <h3>Subscribe</h3>
-                        <p>Get notified when I publish new articles</p>
-                        <form class="subscribe-form">
-                            <input type="email" placeholder="Your email address" required>
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
+        <!-- Accenture -->
+        <article class="work-item work-item--with-skills" style="display:grid;gap:1rem;padding:1.25rem;border-radius:10px;border:1px solid rgba(15,23,42,0.04);box-shadow:0 6px 18px rgba(2,6,23,0.04);margin-bottom:1rem;">
+          <div class="logo-wrap">
+            <img src="assets/logos/accenture.png" alt="Accenture" class="company-logo">
+          </div>
+          <div>
+            <h3 style="margin:0 0 0.25rem 0;">Accenture</h3>
+            <p style="margin:0;font-weight:600;color:#0f172a;">Role: Consultant / Full Stack Engineering</p>
+            <p style="margin:0.25rem 0;color:#475569;font-size:0.95rem;">Dates: May 2021 - April 2024</p>
+            <p style="margin:0.5rem 0 0 0;color:#475569;font-size:0.95rem;">
+              At Accenture, I operated as a full-stack engineer building scalable, production-grade applications that powered enterprise clients across operations, analytics, and cloud. My role blended UI engineering, backend development, data analytics, and cloud modernization—with a heavy focus on reliability, performance, and measurable business impact.
+            </p>
+            <ul style="margin:0.75rem 0 0 1.15rem;color:#475569">
+              <li>Engineered responsive, user-centric frontends using Angular, TypeScript, and HTML/CSS, integrating them with Python-based backend services to improve usability and task completion rates by ~50%.</li>
+              <li>Developed and optimized Power BI dashboards connected to SQL-based operational datasets, enabling KPI visibility across business units and boosting analytics-driven outcomes by ~30%.</li>
+              <li>Built and tested RESTful APIs and integrated them with backend databases to support scalable workflows; performed SQL-based diagnostics and trend analysis to reduce turnaround times by ~20%.</li>
+              <li>Led knowledge-sharing and internal training for new engineers, mentoring teammates through biweekly workshops on Angular, Python, Git, dashboarding, and API best practices to accelerate onboarding and team velocity.</li>
+              <li>Drove cloud migration of enterprise datasets and applications to AWS and Azure, leveraging CI/CD, Docker, and GitHub workflows to reduce hosting costs by ~25% and improve platform reliability by ~35%.</li>
+              <li>Collaborated cross-functionally with product owners, data engineers, and cloud architects to deliver features on tight timelines, ensuring alignment across UX, backend logic, analytics requirements, and infrastructure.</li>
+            </ul>
+          </div>
+          <div class="mphasis-skills" aria-hidden="false">
+            <h4>Skills used</h4>
+            <div class="skill-list">
+              <button class="skill-btn" type="button" onclick="return false;">Angular</button>
+              <button class="skill-btn" type="button" onclick="return false;">TypeScript</button>
+              <button class="skill-btn" type="button" onclick="return false;">HTML/CSS</button>
+              <button class="skill-btn" type="button" onclick="return false;">Python</button>
+              <button class="skill-btn" type="button" onclick="return false;">REST APIs</button>
+              <button class="skill-btn" type="button" onclick="return false;">AWS</button>
+              <button class="skill-btn" type="button" onclick="return false;">Azure</button>
+              <button class="skill-btn" type="button" onclick="return false;">Docker</button>
+              <button class="skill-btn" type="button" onclick="return false;">Git / GitHub</button>
+              <button class="skill-btn" type="button" onclick="return false;">CI/CD pipelines</button>
+              <button class="skill-btn" type="button" onclick="return false;">SQL</button>
+              <button class="skill-btn" type="button" onclick="return false;">Power BI</button>
+              <button class="skill-btn" type="button" onclick="return false;">Tableau</button>
+              <button class="skill-btn" type="button" onclick="return false;">Databricks</button>
+              <button class="skill-btn" type="button" onclick="return false;">Jira / Confluence</button>
+              <button class="skill-btn" type="button" onclick="return false;">Kubernetes</button>
+              <button class="skill-btn" type="button" onclick="return false;">Scikit-learn</button>
+              <button class="skill-btn" type="button" onclick="return false;">Regression Analysis</button>
+              <button class="skill-btn" type="button" onclick="return false;">KPI Modeling</button>
             </div>
-        </section>
-    </main>
+          </div>
+        </article>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Sourabrata Samanta. All rights reserved.</p>
-        </div>
-    </footer>
+      </div>
+    </section>
+  </main>
 
-    <style>
-        .blog-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
+  <footer>
+    <div class="container" style="text-align:center;padding:28px 0;color:#64748b;">
+      <p>&copy; 2025 Sourabrata Samanta. All rights reserved.</p>
+    </div>
+  </footer>
 
-        .blog-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .blog-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .blog-content {
-            padding: 80px 0;
-        }
-
-        .blog-content .container {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 4rem;
-        }
-
-        .blog-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .blog-post {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-left: 4px solid #2563eb;
-        }
-
-        .post-meta {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            font-size: 0.875rem;
-        }
-
-        .post-date {
-            color: #64748b;
-        }
-
-        .post-category {
-            background: #2563eb;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-weight: 600;
-        }
-
-        .blog-post h2 {
-            margin-bottom: 1rem;
-        }
-
-        .blog-post h2 a {
-            color: #1e293b;
-            text-decoration: none;
-            font-size: 1.5rem;
-        }
-
-        .blog-post h2 a:hover {
-            color: #2563eb;
-        }
-
-        .post-excerpt {
-            color: #64748b;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .post-tags {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            background: #e2e8f0;
-            color: #475569;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.75rem;
-        }
-
-        .read-more {
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .read-more:hover {
-            text-decoration: underline;
-        }
-
-        .blog-sidebar {
-            background: #f8fafc;
-            padding: 2rem;
-            border-radius: 10px;
-            height: fit-content;
-        }
-
-        .sidebar-section {
-            margin-bottom: 2rem;
-        }
-
-        .sidebar-section:last-child {
-            margin-bottom: 0;
-        }
-
-        .sidebar-section h3 {
-            color: #1e293b;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .category-list {
-            list-style: none;
-        }
-
-        .category-list li {
-            margin-bottom: 0.5rem;
-        }
-
-        .category-list a {
-            color: #64748b;
-            text-decoration: none;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .category-list a:hover {
-            color: #2563eb;
-        }
-
-        .recent-posts {
-            list-style: none;
-        }
-
-        .recent-posts li {
-            margin-bottom: 0.75rem;
-        }
-
-        .recent-posts a {
-            color: #64748b;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .recent-posts a:hover {
-            color: #2563eb;
-        }
-
-        .subscribe-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .subscribe-form input {
-            padding: 0.75rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-
-        .subscribe-form input:focus {
-            outline: none;
-            border-color: #2563eb;
-        }
-
-        .subscribe-form .btn {
-            padding: 0.75rem;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .blog-content .container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .blog-hero h1 {
-                font-size: 2rem;
-            }
-            
-            .post-meta {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-    </style>
-
-    <script>
-        function toggleMobileMenu() {
-            const navMenu = document.querySelector('.nav-menu');
-            const toggle = document.querySelector('.mobile-menu-toggle');
-            navMenu.classList.toggle('active');
-            toggle.classList.toggle('active');
-        }
-    </script>
+  <script>
+    function toggleMobileMenu() {
+      const navMenu = document.querySelector('.nav-menu');
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      if (!navMenu || !toggle) return;
+      navMenu.classList.toggle('active');
+      toggle.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>

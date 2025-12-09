@@ -239,6 +239,22 @@ nav {
     text-decoration: underline;
 }
 
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.skill-btn {
+    padding: 0.5rem 1rem;
+    background: #e2e8f0;
+    color: #475569;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    cursor: default;
+}
+
 /* Footer */
 footer {
     background: #1e293b;

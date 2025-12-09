@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Sourabrata Samanta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Sourabrata Samanta</div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Work</a></li>
+                <li><a href="education.html" class="active">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="margin-top: 70px;">
+        <section class="education-hero">
+            <div class="container">
+                <h1>Education</h1>
+                <p class="education-subtitle">Academic journey and continuous learning</p>
+            </div>
+        </section>
+
+        <section class="education-content">
+            <div class="container">
+                <div class="education-grid">
+                    <div class="education-card undergrad-card" onclick="openModal('undergrad')">
+                        <div class="card-icon">🎓</div>
+                        <h2>Undergraduate</h2>
+                        <p>Bachelor's Degree</p>
+                        <span class="view-details">Click to view details →</span>
+                    </div>
+
+                    <div class="education-card grad-card" onclick="openModal('grad')">
+                        <div class="card-icon">🎓</div>
+                        <h2 style="color:ivory">Graduate</h2>
+                        <p style="color:ivory">Master's Degree</p>
+                        <span class="view-details">Click to view details →</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Undergrad Modal -->
+    <div id="undergrad-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('undergrad')">&times;</span>
+            <div class="modal-header">
+                <img src="assets/logos/kiit.png" alt="KIIT University" class="university-logo">
+                <h2>KIIT University</h2>
+                <p class="degree">B.Tech in Electronics and Computer Engineering</p>
+            </div>
+            <div class="modal-body">
+                <div class="info-section">
+                    <h3>📅 Duration</h3>
+                    <p>August 2017 - May 2021</p>
+                </div>
+                <div class="info-section">
+                    <h3>📊 CGPA</h3>
+                    <p>8.5/10.0</p>
+                </div>
+                <div class="info-section">
+                    <h3>📚 Key Courses</h3>
+                    <ul>
+                        <li>Data Structures & Algorithms</li>
+                        <li>Database Management Systems</li>
+                        <li>Computer Networks</li>
+                        <li>Operating Systems</li>
+                        <li>Software Engineering</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>🏆 Certifications</h3>
+                    <ul>
+                        <li>Introduction to Cloud Computing</li>
+                        <li>Python Programming with Data Science</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>🎯 Extracurriculars</h3>
+                    <ul>
+                        <li>Sports Club Member - Organized Football competitions</li>
+                        <li>Music Society - Co-Ordinator at Korus Music</li>
+                        <li>Founder - Udbhab Theatrical Group</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grad Modal -->
+    <div id="grad-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('grad')">&times;</span>
+            <div class="modal-header">
+                <img src="assets/logos/indiana.webp" alt="Indiana University" class="university-logo">
+                <h2>Indiana University</h2>
+                <p class="degree">Master of Science in Information Systems</p>
+            </div>
+            <div class="modal-body">
+                <div class="info-section">
+                    <h3>📅 Duration</h3>
+                    <p>May 2024 - Dec 2025</p>
+                </div>
+                <div class="info-section">
+                    <h3>📊 GPA</h3>
+                    <p>3.525/4.0</p>
+                </div>
+                <div class="info-section">
+                    <h3>📚 Key Courses</h3>
+                    <ul>
+                        <li>IT Strategy</li>
+                        <li>Cloud Computing & Architecture</li>
+                        <li>Machine Learning & AI</li>
+                        <li>Data Analytics & Visualization</li>
+                        <li>Enterprise Systems & Strategy</li>
+                        <li>Software Product Development</li>
+                        <li>Product Management</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>🏆 Certifications</h3>
+                    <ul>
+                        <li>AWS Academy Graduate - AWS Academy Cloud Foundations</li>
+                        <li>Generative AI Engineer (Databricks)</li>
+                        <li>Level up LLM applications development with LangChain and OpenAI</li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sourabrata Samanta. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .education-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .education-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .education-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .education-content {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .education-card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        .undergrad-card {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+        }
+        .grad-card {
+            background: #990000;
+            color: white;
+        }
+        .grad-card h2,
+        .grad-card p {
+            color: white;
+        }
+        .grad-card .view-details {
+            color: #EFDBB2;
+        }
+        .card-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        .education-card h2 {
+            font-size: 1.8rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+        .education-card p {
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+        .view-details {
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow: auto;
+        }
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 700px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            animation: slideDown 0.3s ease;
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #000;
+        }
+        .modal-header {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px 15px 0 0;
+        }
+        .university-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        .modal-header h2 {
+            margin: 0.5rem 0;
+            font-size: 2rem;
+        }
+        .degree {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .modal-body {
+            padding: 2rem;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .info-section {
+            margin-bottom: 1.5rem;
+        }
+        .info-section h3 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .info-section p {
+            color: #64748b;
+            margin: 0;
+        }
+        .info-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .info-section ul li {
+            color: #64748b;
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .info-section ul li:before {
+            content: "•";
+            color: #2563eb;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        @media (max-width: 768px) {
+            .education-hero h1 {
+                font-size: 2rem;
+            }
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+            }
+        }
+    </style>
+
+    <script>
+        function openModal(type) {
+            document.getElementById(type + '-modal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(type) {
+            document.getElementById(type + '-modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            navMenu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

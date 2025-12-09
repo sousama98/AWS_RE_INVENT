@@ -19,7 +19,8 @@
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog.html">Work</a></li>
+                <li><a href="education.html">Education</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -29,8 +30,8 @@
         <section class="hero">
             <div class="hero-content">
                 <h1>Hi, I'm <span class="highlight">Sourabrata Samanta</span></h1>
-                <p class="hero-subtitle">Software Developer | Cloud Enthusiast | Problem Solver</p>
-                <p class="hero-description">I build scalable applications and love working with modern technologies to solve real-world problems.</p>
+                <p class="hero-subtitle">AI Engineer | Full-Stack Developer | Cloud &amp; Data Specialist</p>
+                <p class="hero-description">I build intelligent, scalable applications powered by modern AI, cloud, and data systems.</p>
                 <div class="hero-buttons">
                     <a href="projects.html" class="btn btn-primary">View My Work</a>
                     <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
@@ -38,36 +39,223 @@
             </div>
         </section>
 
-        <section class="featured-projects">
+        <section class="carousel-section">
             <div class="container">
-                <h2>Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Project Name</h3>
-                        <p>Brief description of your project and the technologies used.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">AWS</span>
+                <h2>Gallery</h2>
+                <div class="hobbies-left">
+                    <span class="hobby" style="top: 8%; left: 5%;">🎸 Guitar Player</span>
+                    <span class="hobby" style="top: 8%; left: 55%;">🎸 Lyricist</span>
+                    <span class="hobby" style="top: 20%; left: 5%;">🎸 Spotify Podcaster</span>
+                    <span class="hobby" style="top: 20%; left: 67%;">🎸 Rock Music</span>
+                    <span class="hobby" style="top: 40%; left: 5%;">🎵 Motley Crew</span>
+                    <span class="hobby" style="top: 40%; left: 55%;">🎵 Coldplay</span>
+                    <span class="hobby" style="top: 52%; left: 5%;">🎵 Pink Floyd</span>
+                    <span class="hobby" style="top: 52%; left: 55%;">🎵 Alterbridge</span>
+                    <span class="hobby" style="top: 72%; left: 5%;">✈️ Solo Traveller</span>
+                    <span class="hobby" style="top: 72%; left: 55%;">✈️ Foodie</span>
+                    <span class="hobby" style="top: 84%; left: 30%;">✈️ Travel Enthusiast</span>
+                </div>
+                <div class="hobbies-right">
+                    <span class="hobby" style="top: 8%; right: 5%;">🎮 Fifa</span>
+                    <span class="hobby" style="top: 8%; right: 55%;">🎮 CS-GO</span>
+                    <span class="hobby" style="top: 18%; right: 30%;">🎮 Assassins Creed</span>
+                    <span class="hobby" style="top: 30%; right: 0%;">📷 Travel Vlogger</span>
+                    <span class="hobby" style="top: 30%; right: 50%;">📷 Street Photography</span>
+                    <span class="hobby" style="top: 45%; right: 5%;">🎬 Satyajit Ray</span>
+                    <span class="hobby" style="top: 45%; right: 55%;">🎬 Alfred Hitchcock</span>
+                    <span class="hobby" style="top: 57%; right: 0%;">⚽ India</span>
+                    <span class="hobby" style="top: 57%; right: 40%;">🎬 Christopher Nolan</span>
+                    <span class="hobby" style="top: 72%; right: 5%;">🎬 Marvel </span>
+                    <span class="hobby" style="top: 72%; right: 50%;">⚽ Manchester United</span>
+                    <span class="hobby" style="top: 84%; right: 5%;">⚽ Argentina FC</span>
+                    <span class="hobby" style="top: 84%; right: 55%;">⚽ Mohunbagan</span>
+                </div>
+                <div class="carousel">
+                    <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+                    <div class="carousel-container">
+                        <div class="carousel-slide active">
+                            <img src="assets/logos/re.JPG" alt="Slide 1">
                         </div>
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project Name</h3>
-                        <p>Brief description of your project and the technologies used.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">PostgreSQL</span>
+                        <div class="carousel-slide">
+                            <img src="assets/logos/key.JPG" alt="Slide 2">
                         </div>
-                        <a href="#" class="project-link">View Project →</a>
+                        <div class="carousel-slide">
+                            <img src="assets/logos/aws.JPG" alt="Slide 3">
+                        </div>
+                           <div class="carousel-slide">
+                            <img src="assets/logos/kiro.JPG" alt="Slide 4">
+                        </div>
                     </div>
+                    <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
         </section>
     </main>
 
+    <style>
+        .carousel-section {
+            padding: 100px 0;
+            background: #f8fafc;
+            position: relative;
+        }
+        .carousel-section .container {
+            position: relative;
+            max-width: 1400px;
+        }
+        .hobbies-left, .hobbies-right {
+            position: absolute;
+            width: 250px;
+            height: 500px;
+            pointer-events: none;
+            top: 80px;
+            z-index: 1;
+        }
+        .hobbies-left {
+            left: 20px;
+        }
+        .hobbies-right {
+            right: 20px;
+        }
+        .hobby {
+            position: absolute;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            white-space: nowrap;
+            animation: float 3s ease-in-out infinite;
+            max-width: 170px;
+        }
+        .hobby:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        .hobby:nth-child(3) {
+            animation-delay: 1s;
+        }
+        .hobby:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .carousel-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e293b;
+        }
+        .carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+        .carousel-slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-slide.active {
+            display: block;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 16px;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 10;
+            transition: background 0.3s;
+        }
+        .carousel-btn:hover {
+            background: rgba(0,0,0,0.8);
+        }
+        .carousel-btn.prev {
+            left: 10px;
+        }
+        .carousel-btn.next {
+            right: 10px;
+        }
+        .carousel-dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .dot.active {
+            background: #2563eb;
+        }
+        @media (max-width: 768px) {
+            .carousel-container {
+                height: 250px;
+            }
+            .hobbies-left, .hobbies-right {
+                display: none;
+            }
+        }
+    </style>
+
     <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.dot');
+            
+            if (index >= slides.length) currentIndex = 0;
+            if (index < 0) currentIndex = slides.length - 1;
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+        }
+
+        function moveSlide(direction) {
+            currentIndex += direction;
+            showSlide(currentIndex);
+        }
+
+        function currentSlide(index) {
+            currentIndex = index;
+            showSlide(currentIndex);
+        }
+
         function toggleMobileMenu() {
             const navMenu = document.querySelector('.nav-menu');
             const toggle = document.querySelector('.mobile-menu-toggle');
