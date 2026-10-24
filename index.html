@@ -1,468 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sourabrata - Technical Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0c1d19">
+  <meta name="description" content="Step into the portfolio of Sourabrata Samanta. AI engineering, cloud systems, data analytics, and a little magic.">
+  <title>Platform 9¾ — Sourabrata Samanta</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="enchanted.css">
+  <script src="enchanted.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="assets/illustrations/monogram.svg">
+    <link rel="preload" as="image" media="(prefers-reduced-motion: no-preference)" href="assets/illustrations/sourabrata-wizard-platform.png">
+    <link rel="stylesheet" href="page-spell.css">
+    <script>if (!matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.classList.add('spell-pending'); setTimeout(() => document.documentElement.classList.remove('spell-pending'), 4000); }</script>
+    <script src="page-spell.js" defer></script>
 </head>
-<body>
-    <div class="animated-bg" id="particleCanvas"></div>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Sourabrata Samanta</div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Work</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+<body class="home-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+    <nav aria-label="Main navigation">
+      <div class="nav-container">
+        <a class="brand" href="index.html" aria-label="Sourabrata Samanta, home"><span class="brand-mark" aria-hidden="true">S<span>✦</span></span><span class="brand-name">Sourabrata Samanta<small>A LITTLE LOGIC. A LITTLE MAGIC.</small></span></a>
+        <ul class="nav-menu" id="main-menu"><li><a href="index.html" class="active" aria-current="page">Home · 9¾</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="blog.html">Experience</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="certifications.html">Credentials</a></li>
+<li><a href="interests.html">Interests</a></li>
+<li><a href="contact.html">Contact</a></li></ul>
+        <div class="nav-actions"><button class="light-switch" type="button" aria-pressed="false" aria-label="Switch to parchment theme"><span aria-hidden="true">☼</span> <span class="light-label">Lumos</span></button><button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button></div>
+      </div>
     </nav>
+<main id="main-content" tabindex="-1">
+  <section class="platform-hero" aria-labelledby="platform-title">
+    <div class="container platform-layout">
+      <div class="platform-copy">
+        <p class="eyebrow"><span class="tiny-star" aria-hidden="true">✦</span> WELCOME TO MY CORNER OF THE UNIVERSE</p>
+        <h1 id="platform-title">Extraordinary things<br>begin with a little<br><em>curiosity.</em></h1>
+        <p class="platform-intro">I’m <strong>Sourabrata Samanta.</strong><br>AI engineer, data storyteller, and builder of things<br class="desktop-break"> that make the complex feel simple.</p>
+        <div class="entrance-actions"><a class="magic-button" href="#journey" id="enter-platform">Enter Platform 9¾ <span aria-hidden="true">↗</span></a><a class="quiet-link" href="projects.html">Straight to my work <span aria-hidden="true">→</span></a></div>
+        <div class="platform-note"><span class="note-line"></span><p>No ticket required.<br>Just a curious mind.</p></div>
+      </div>
+      <div class="portal-scene">
+        <div class="scene-orbit" aria-hidden="true"></div>
+        <span class="scene-star star-one" aria-hidden="true">✧</span><span class="scene-star star-two" aria-hidden="true">✦</span>
+        <img class="portal-art" src="assets/illustrations/midnight-express.svg" alt="A burgundy steam train waiting beyond a golden station arch, with a moonlit castle in the distance." width="760" height="820" fetchpriority="high">
+        <span class="scene-caption">BETWEEN THE ORDINARY &amp; THE EXTRAORDINARY</span>
+        <a class="platform-seal" href="#journey" aria-label="Platform 9 and three quarters, explore the portfolio"><small>PLATFORM</small><strong>9¾</strong><span>ALL ABOARD</span></a>
+      </div>
+    </div>
+    <div class="container hero-baseline"><span>AI &amp; DATA <i>✦</i> CLOUD &amp; CODE <i>✦</i> PRODUCT &amp; POSSIBILITY</span><a href="#journey">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+  </section>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Hi, I Am <span class="highlight">Sourabrata Samanta</span></h1>
-                <p class="hero-subtitle">AI Engineer | Full-Stack Developer | Cloud &amp; Data Specialist</p>
-                <p class="hero-description">I build intelligent, scalable applications powered by modern AI, cloud, and data systems.</p>
-                <div class="hero-buttons">
-                    <a href="projects.html" class="btn btn-primary">View My Work</a>
-                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-        </section>
+  <section class="journey-section" id="journey" aria-labelledby="journey-title" tabindex="-1">
+    <div class="container">
+      <div class="section-top"><div><p class="eyebrow">YOUR JOURNEY, YOUR WAY</p><h2 id="journey-title">Where shall we <em>begin?</em></h2></div><p>Every stop has a story.<br>Pick a destination and explore.</p></div>
+      <div class="journey-map">
+        <a class="destination" href="about.html"><span class="stop-number">01</span><span class="stop-node" aria-hidden="true"></span><small>THE ORIGIN STORY</small><h3>About me</h3><p>The person behind<br>the projects.</p><span class="stop-arrow" aria-hidden="true">↗</span></a>
+        <a class="destination" href="projects.html"><span class="stop-number">02</span><span class="stop-node" aria-hidden="true"></span><small>THE SPELLBOOK</small><h3>Projects</h3><p>Experiments that became<br>real-world solutions.</p><span class="stop-arrow" aria-hidden="true">↗</span></a>
+        <a class="destination" href="blog.html"><span class="stop-number">03</span><span class="stop-node" aria-hidden="true"></span><small>THE JOURNEY SO FAR</small><h3>Experience</h3><p>Teams, challenges,<br>and meaningful impact.</p><span class="stop-arrow" aria-hidden="true">↗</span></a>
+        <a class="destination" href="education.html"><span class="stop-number">04</span><span class="stop-node" aria-hidden="true"></span><small>THE ACADEMY</small><h3>Education</h3><p>A foundation built<br>on always learning.</p><span class="stop-arrow" aria-hidden="true">↗</span></a>
+        <a class="destination" href="certifications.html"><span class="stop-number">05</span><span class="stop-node" aria-hidden="true"></span><small>THE COLLECTION</small><h3>Credentials</h3><p>Milestones along<br>the way.</p><span class="stop-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
 
-        <section class="carousel-section">
-            <div class="container">
-                <h2>Gallery</h2>
-                <p class="carousel-subtitle">A few things I love outside of work.</p>
+  <section class="selected-section" aria-labelledby="selected-title"><div class="container">
+    <div class="section-top"><div><p class="eyebrow">A LITTLE LESS THEORY. A LITTLE MORE IMPACT.</p><h2 id="selected-title">The magic is in <em>the making.</em></h2></div><a class="quiet-link" href="projects.html">Explore all projects ↗</a></div>
+    <div class="featured-grid">
+      <a class="feature-story" href="projects.html#project-tracyai"><div class="feature-art constellation" aria-hidden="true"><span class="orbit-ring"></span><span class="orbit-ring inner"></span><b>AI</b><i class="spark a">✦</i><i class="spark b">✧</i><span class="art-label">CONNECT · RETRIEVE · REASON</span></div><div class="feature-text"><span class="eyebrow">01 / AI ENGINEERING · MPHASIS</span><h3>Turning complexity<br>into intelligence. <span>↗</span></h3><p>TracyAI: I helped build document processing and retrieval workflows for a vendor risk platform. Through the team’s work, assessment time fell from approximately one month to under seven days.</p><div class="tag-row"><span>Amazon Bedrock</span><span>Python</span><span>RAG</span></div></div></a>
+      <a class="feature-story" href="blog.html#rtm"><div class="feature-art data-art" aria-hidden="true"><div class="chart-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="data-value">25+<small>PROJECTS. ONE CLEARER PICTURE.</small></span><span class="art-label">MODEL · VALIDATE · UNDERSTAND</span></div><div class="feature-text"><span class="eyebrow">02 / DATA &amp; ANALYTICS · RTM</span><h3>Making the numbers<br>tell the truth. <span>↗</span></h3><p>Enterprise semantic modeling, Power BI dashboards, and the investigation behind a $5M write-off discrepancy.</p><div class="tag-row"><span>Microsoft Fabric</span><span>SQL</span><span>Power BI</span></div></div></a>
+    </div>
+  </div></section>
 
-                <div class="hobbies-container">
-                    <div class="hobby-card active">
-                        <div class="hobby-card-header">
-                            <span class="hobby-emoji">🎸</span>
-                            <h3>Music &amp; Audio</h3>
-                        </div>
-                        <p>I write, play, and tell stories through sound.</p>
-                        <div class="hobby-tags">
-                            <span class="hobby-tag">Guitar player</span>
-                            <span class="hobby-tag">Lyricist</span>
-                            <span class="hobby-tag">Spotify podcaster</span>
-                            <span class="hobby-tag">Rock music</span>
-                        </div>
-                    </div>
+  <section class="beyond-section" aria-labelledby="beyond-title"><div class="container beyond-layout"><div><p class="eyebrow">BEYOND THE KEYBOARD</p><h2 id="beyond-title">More than<br><em>my code.</em></h2><p>A guitar, a good story, a new city.<br>There’s always another world to explore.</p><div class="interest-list"><span>Guitar &amp; original music</span><span>Solo travel &amp; food</span><span>Cinema &amp; storytelling</span><span>Gaming &amp; football</span></div><a class="quiet-link" href="interests.html">Outside the work ↗</a></div><div class="memory-grid"><figure><img src="assets/logos/Carousel/re.JPG" alt="A moment from Sourabrata’s personal gallery" loading="lazy" width="500" height="600"><figcaption>Curiosity takes me places.</figcaption></figure><figure><img src="assets/logos/Carousel/IMG_1855.jpeg" alt="A travel memory from Sourabrata’s gallery" loading="lazy" width="500" height="600"><figcaption>Collecting stories along the way.</figcaption></figure></div></div></section>
 
-                    <div class="hobby-card active">
-                        <div class="hobby-card-header">
-                            <span class="hobby-emoji">✈️</span>
-                            <h3>Travel &amp; Food</h3>
-                        </div>
-                        <p>Exploring places, people, and plates one trip at a time.</p>
-                        <div class="hobby-tags">
-                            <span class="hobby-tag">Solo traveller</span>
-                            <span class="hobby-tag">Travel vlogger</span>
-                            <span class="hobby-tag">Foodie</span>
-                        </div>
-                    </div>
+  <details class="photo-journal container"><summary>Open the photo journal <span aria-hidden="true">+</span></summary><div class="photo-archive"><img src="assets/logos/Carousel/key.JPG" alt="Photo 3 from Sourabrata’s personal gallery" loading="lazy" width="600" height="450"><img src="assets/logos/Carousel/aws.JPG" alt="Photo 4 from Sourabrata’s personal gallery" loading="lazy" width="600" height="450"><img src="assets/logos/Carousel/kiro.jpg" alt="Photo 5 from Sourabrata’s personal gallery" loading="lazy" width="600" height="450"><img src="assets/logos/Carousel/100_0464.JPG" alt="Photo 6 from Sourabrata’s personal gallery" loading="lazy" width="600" height="450"><img src="assets/logos/Carousel/FullSizeRender.jpeg" alt="Photo 7 from Sourabrata’s personal gallery" loading="lazy" width="600" height="450"><img src="assets/logos/Carousel/IMG_3773.JPG" alt="Photo 8 from Sourabrata’s personal gallery" loading="lazy" width="600" height="450"><img src="assets/logos/Carousel/IMG_5465.jpeg" alt="Photo 9 from Sourabrata’s personal gallery" loading="lazy" width="600" height="450"><img src="assets/logos/Carousel/IMG_5577.JPG" alt="Photo 10 from Sourabrata’s personal gallery" loading="lazy" width="600" height="450"><img src="assets/logos/Carousel/IMG_5587.JPG" alt="Photo 11 from Sourabrata’s personal gallery" loading="lazy" width="600" height="450"><img src="assets/logos/Carousel/IMG_5783.JPG" alt="Photo 12 from Sourabrata’s personal gallery" loading="lazy" width="600" height="450"><img src="assets/logos/Carousel/IMG_6643.JPG" alt="Photo 13 from Sourabrata’s personal gallery" loading="lazy" width="600" height="450"><img src="assets/logos/Carousel/invent.jpeg" alt="Photo 14 from Sourabrata’s personal gallery" loading="lazy" width="600" height="450"></div></details>
 
-                    <div class="hobby-card">
-                        <div class="hobby-card-header">
-                            <span class="hobby-emoji">🎮</span>
-                            <h3>Gaming</h3>
-                        </div>
-                        <p>Competitive and story-driven worlds I keep going back to.</p>
-                        <div class="hobby-tags">
-                            <span class="hobby-tag">FIFA</span>
-                            <span class="hobby-tag">CS:GO</span>
-                            <span class="hobby-tag">Assassin's Creed</span>
-                        </div>
-                    </div>
-
-                    <div class="hobby-card">
-                        <div class="hobby-card-header">
-                            <span class="hobby-emoji">🎬</span>
-                            <h3>Cinema &amp; Storytelling</h3>
-                        </div>
-                        <p>From classic directors to universe-building blockbusters.</p>
-                        <div class="hobby-tags">
-                            <span class="hobby-tag">Satyajit Ray</span>
-                            <span class="hobby-tag">Christopher Nolan</span>
-                            <span class="hobby-tag">Marvel</span>
-                        </div>
-                    </div>
-
-                    <div class="hobby-card">
-                        <div class="hobby-card-header">
-                            <span class="hobby-emoji">⚽</span>
-                            <h3>Football</h3>
-                        </div>
-                        <p>Match nights, rivalries, and the beautiful game.</p>
-                        <div class="hobby-tags">
-                            <span class="hobby-tag">Manchester United</span>
-                            <span class="hobby-tag">Argentina</span>
-                            <span class="hobby-tag">Mohun Bagan</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel">
-                    <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
-                    <div class="carousel-container">
-                        <div class="carousel-slide active">
-                            <img src="assets/logos/Carousel/re.JPG" alt="Gallery 1">
-                            <img src="assets/logos/Carousel/key.JPG" alt="Gallery 2">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="assets/logos/Carousel/aws.JPG" alt="Gallery 3">
-                            <img src="assets/logos/Carousel/kiro.jpg" alt="Gallery 4">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="assets/logos/Carousel/100_0464.JPG" alt="Gallery 5">
-                            <img src="assets/logos/Carousel/FullSizeRender.jpeg" alt="Gallery 6">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="assets/logos/Carousel/IMG_1855.jpeg" alt="Gallery 7">
-                            <img src="assets/logos/Carousel/IMG_3773.JPG" alt="Gallery 8">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="assets/logos/Carousel/IMG_5465.jpeg" alt="Gallery 9">
-                            <img src="assets/logos/Carousel/IMG_5577.JPG" alt="Gallery 10">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="assets/logos/Carousel/IMG_5587.JPG" alt="Gallery 11">
-                            <img src="assets/logos/Carousel/IMG_5783.JPG" alt="Gallery 12">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="assets/logos/Carousel/IMG_6643.JPG" alt="Gallery 13">
-                            <img src="assets/logos/Carousel/invent.jpeg" alt="Gallery 14">
-                        </div>
-                    </div>
-                    <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
-                </div>
-                <div class="carousel-dots">
-                    <span class="dot active" onclick="currentSlide(0)"></span>
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
-                    <span class="dot" onclick="currentSlide(6)"></span>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <style>
-        .carousel-section {
-            padding: 60px 0;
-            background: #f0f9ff;
-            position: relative;
-        }
-        .carousel-section .container {
-            position: relative;
-            max-width: 1400px;
-        }
-        .carousel-section h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            margin-top: -10px;
-            color: #1e293b;
-        }
-        .carousel-subtitle {
-            text-align: center;
-            font-size: 1rem;
-            color: #64748b;
-            margin-top: -1rem;
-            margin-bottom: 2rem;
-        }
-        .hobbies-container {
-            display: flex;
-            gap: 1.5rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            min-height: 180px;
-            justify-content: center;
-        }
-        .hobby-card {
-            background: #ffffff;
-            border-radius: 14px;
-            padding: 1rem 1.2rem;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
-            position: relative;
-            overflow: hidden;
-            transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, opacity 1s ease, transform 1s ease;
-            opacity: 0;
-            transform: translateY(20px);
-            flex: 0 0 280px;
-        }
-        .hobby-card.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .hobby-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at top left, rgba(14, 165, 233, 0.15), transparent 55%);
-            opacity: 0;
-            transition: opacity 180ms ease;
-            pointer-events: none;
-        }
-        .hobby-card:hover,
-        .hobby-card:focus-within {
-            transform: translateY(-6px);
-            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
-            border-color: #a5b4fc;
-        }
-        .hobby-card:hover::before,
-        .hobby-card:focus-within::before {
-            opacity: 1;
-        }
-        .hobby-card-header {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            margin-bottom: 0.65rem;
-        }
-        .hobby-emoji {
-            width: 32px;
-            height: 32px;
-            border-radius: 999px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
-            color: #ffffff;
-            font-size: 1.1rem;
-            box-shadow: 0 6px 14px rgba(14, 165, 233, 0.4);
-        }
-        .hobby-card h3 {
-            font-size: 1.05rem;
-            margin: 0;
-            color: #1f2933;
-        }
-        .hobby-card p {
-            margin: 0 0 0.6rem;
-            font-size: 0.9rem;
-            color: #64748b;
-        }
-        .hobby-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.35rem;
-        }
-        .hobby-tag {
-            font-size: 0.78rem;
-            padding: 0.25rem 0.55rem;
-            border-radius: 999px;
-            background: #ecfeff;
-            color: #0e7490;
-            border: 1px solid rgba(6, 182, 212, 0.6);
-            white-space: nowrap;
-        }
-        .carousel {
-            position: relative;
-            max-width: 100%;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            z-index: 10;
-        }
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            height: 450px;
-        }
-        .carousel-slide {
-            display: none;
-            width: 100%;
-            height: 100%;
-            gap: 1rem;
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
-        .carousel-slide.active {
-            display: flex;
-            opacity: 1;
-        }
-        .carousel-slide img {
-            width: calc(50% - 0.5rem);
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            padding: 16px;
-            cursor: pointer;
-            font-size: 18px;
-            z-index: 10;
-            transition: background 0.3s;
-        }
-        .carousel-btn:hover {
-            background: rgba(0,0,0,0.8);
-        }
-        .carousel-btn.prev {
-            left: 10px;
-        }
-        .carousel-btn.next {
-            right: 10px;
-        }
-        .carousel-dots {
-            text-align: center;
-            margin-top: 15px;
-        }
-        .dot {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #cbd5e1;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .dot.active {
-            background: #0891b2;
-        }
-        @media (max-width: 768px) {
-            .carousel-container {
-                height: 250px;
-            }
-            .carousel-slide {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            .carousel-slide img {
-                width: 100%;
-                height: calc(50% - 0.25rem);
-            }
-            .hobbies-container {
-                flex-direction: column;
-                align-items: center;
-                margin-bottom: 2.5rem;
-            }
-            .hobby-card {
-                flex: 0 0 auto;
-                width: 100%;
-                max-width: 320px;
-            }
-        }
-    </style>
-
-    <script>
-        let currentIndex = 0;
-        let hobbyIndex = 0;
-        let autoSlideInterval;
-
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.carousel-slide');
-            const dots = document.querySelectorAll('.dot');
-            
-            if (index >= slides.length) currentIndex = 0;
-            if (index < 0) currentIndex = slides.length - 1;
-            
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            slides[currentIndex].classList.add('active');
-            dots[currentIndex].classList.add('active');
-        }
-
-        function moveSlide(direction) {
-            currentIndex += direction;
-            showSlide(currentIndex);
-            resetAutoSlide();
-        }
-
-        function currentSlide(index) {
-            currentIndex = index;
-            showSlide(currentIndex);
-            resetAutoSlide();
-        }
-
-        function autoSlide() {
-            currentIndex++;
-            showSlide(currentIndex);
-        }
-
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            autoSlideInterval = setInterval(autoSlide, 3000);
-        }
-
-        function rotateHobbies() {
-            const cards = document.querySelectorAll('.hobby-card');
-            cards.forEach(card => card.classList.remove('active'));
-            
-            const card1 = hobbyIndex % cards.length;
-            const card2 = (hobbyIndex + 1) % cards.length;
-            
-            cards[card1].classList.add('active');
-            cards[card2].classList.add('active');
-            
-            hobbyIndex = (hobbyIndex + 2) % cards.length;
-        }
-
-        // Start auto-rotation
-        autoSlideInterval = setInterval(autoSlide, 3000);
-        setInterval(rotateHobbies, 3000);
-
-        function toggleMobileMenu() {
-            const navMenu = document.querySelector('.nav-menu');
-            const toggle = document.querySelector('.mobile-menu-toggle');
-            navMenu.classList.toggle('active');
-            toggle.classList.toggle('active');
-        }
-
-        // Animated background particles
-        function createParticles() {
-            const container = document.getElementById('particleCanvas');
-            const particleCount = 15;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                
-                const size = Math.random() * 60 + 20;
-                const startX = Math.random() * 100;
-                const startY = Math.random() * 100;
-                const delay = Math.random() * 20;
-                
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                particle.style.left = startX + '%';
-                particle.style.top = startY + '%';
-                particle.style.animationDelay = delay + 's';
-                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-                
-                container.appendChild(particle);
-            }
-        }
-        
-        createParticles();
-    </script>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Sourabrata. All rights reserved.</p>
-        </div>
-    </footer>
+  <section class="owl-post"><div class="container"><span class="owl-star" aria-hidden="true">✧</span><p class="eyebrow">THE NEXT GREAT ADVENTURE</p><h2>Shall we make<br>something <em>extraordinary?</em></h2><p>Have a challenge, an idea, or just a hello?<br>My owl post is always open.</p><a class="magic-button" href="contact.html">Let’s connect <span aria-hidden="true">↗</span></a><a class="email-link" href="mailto:soursama@iu.edu">soursama@iu.edu</a></div></section>
+</main>
+<footer><div class="container footer-inner"><a class="footer-brand" href="index.html">Sourabrata Samanta <span>✦</span></a><p>Built with curiosity. Finished with a little magic.</p><a href="contact.html">Let’s create something ↗</a><small>© 2026 Sourabrata Samanta</small></div></footer>
 </body>
 </html>

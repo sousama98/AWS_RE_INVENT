@@ -3,51 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Your Name</title>
+    <title>Projects — Sourabrata Samanta</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#0c1d19">
+    <link rel="stylesheet" href="enchanted.css">
+    <script src="enchanted.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="assets/illustrations/monogram.svg">
+    <link rel="stylesheet" href="projects.css">
+    <script src="projects.js" defer></script>
+    <link rel="preload" as="image" media="(prefers-reduced-motion: no-preference)" href="assets/illustrations/sourabrata-wizard-projects.png">
+    <link rel="stylesheet" href="page-spell.css">
+    <script>if (!matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.classList.add('spell-pending'); setTimeout(() => document.documentElement.classList.remove('spell-pending'), 4000); }</script>
+    <script src="page-spell.js" defer></script>
 </head>
-<body>
-    <div class="animated-bg" id="particleCanvas"></div>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Sourabrata Samanta</div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="blog.html">Work</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+<body class="projects-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav aria-label="Main navigation">
+      <div class="nav-container">
+        <a class="brand" href="index.html" aria-label="Sourabrata Samanta, home"><span class="brand-mark" aria-hidden="true">S<span>✦</span></span><span class="brand-name">Sourabrata Samanta<small>A LITTLE LOGIC. A LITTLE MAGIC.</small></span></a>
+        <ul class="nav-menu" id="main-menu"><li><a href="index.html">Home · 9¾</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+<li><a href="blog.html">Experience</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="certifications.html">Credentials</a></li>
+<li><a href="interests.html">Interests</a></li>
+<li><a href="contact.html">Contact</a></li></ul>
+        <div class="nav-actions"><button class="light-switch" type="button" aria-pressed="false" aria-label="Switch to parchment theme"><span aria-hidden="true">☼</span> <span class="light-label">Lumos</span></button><button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button></div>
+      </div>
     </nav>
 
-    <main style="margin-top: 70px;">
+    <main id="main-content" tabindex="-1" style="margin-top: 70px;">
         <section class="projects-hero">
             <div class="container">
-                <h1>My Projects</h1>
-                <p class="projects-subtitle">A showcase of my technical work and problem-solving approach</p>
+                <p class="eyebrow">02 / THE SPELLBOOK</p><h1>My Projects</h1>
+                <p class="projects-subtitle">A few questions I’ve explored. A few things I’ve brought to life.</p>
             </div>
         </section>
 
-        <section class="projects-content">
-            <div class="container">
-                <div class="projects-grid">
-
-                
-
-                    <div class="project-card-detailed">
-                        <div class="project-info">
-                            <h3>Premium Subscriber Conversion Prediction</h3>
-                            <p class="project-description">This initiative centers on developing a data-driven engine capable of forecasting freemium-to-premium conversion behavior across a user base of more than 58,000 records. Leveraging R, the project integrates exploratory data analysis, causal inference, and advanced machine-learning methodologies to deliver actionable insights for customer lifecycle optimization.</p>
-                            
-                            <div class="project-details">
+        <section class="projects-content spellbook-section" aria-label="Project spellbook"><div class="container">
+  <div class="spellbook-topline"><p>FOUR PROJECTS. FOUR DIFFERENT KINDS OF CURIOSITY.</p><span class="browse-hint">CHOOSE A CHAPTER BELOW</span></div>
+  <div class="spellbook" role="region" aria-label="Browse projects">
+    <aside class="chapter-index" hidden><div class="index-heading"><span>THE INDEX</span><span aria-hidden="true">✦</span></div><button class="chapter-select" type="button" data-project="0" aria-controls="project-conversion" aria-pressed="true"><span>01</span><span><small>GROWTH ANALYTICS</small><strong>Conversion prediction</strong></span><span class="chapter-select-arrow" aria-hidden="true">↗</span></button><button class="chapter-select" type="button" data-project="1" aria-controls="project-seoul" aria-pressed="false"><span>02</span><span><small>URBAN MOBILITY</small><strong>Seoul bike demand</strong></span><span class="chapter-select-arrow" aria-hidden="true">↗</span></button><button class="chapter-select" type="button" data-project="2" aria-controls="project-pwc" aria-pressed="false"><span>03</span><span><small>EXPLAINABLE AI · PwC CAPSTONE</small><strong>Human-aligned AI</strong></span><span class="chapter-select-arrow" aria-hidden="true">↗</span></button><button class="chapter-select" type="button" data-project="3" aria-controls="project-tracyai" aria-pressed="false"><span>04</span><span><small>GENERATIVE AI · MPHASIS</small><strong>AI for vendor risk</strong></span><span class="chapter-select-arrow" aria-hidden="true">↗</span></button><p class="index-note">A question.<br>An experiment.<br>A little discovery.</p></aside>
+    <div class="spell-stage"><article class="spell-slide" id="project-conversion" aria-labelledby="title-conversion" data-title="Conversion prediction">
+      <div class="spell-overview"><p class="eyebrow">01 / GROWTH ANALYTICS</p><h2 id="title-conversion">Who’s ready for premium?</h2><p class="spell-summary">Predicting subscription conversion from 58,000+ user records to help teams prioritize high-value users and personalize onboarding.</p><div class="spell-tags"><span>R</span><span>Classification</span><span>Causal inference</span></div><p class="spell-purpose"><span aria-hidden="true">✦</span> From engagement signals to growth decisions.</p></div>
+      <div class="spell-visual visual-conversion"><div class="visual-heading"><span>FIELD NOTES / 01</span><span aria-hidden="true">✧</span></div><div class="spell-metric"><strong>58k+</strong><span>user records analyzed</span></div><svg viewBox="0 0 440 290" fill="none" aria-hidden="true"><path d="M50 230H395M50 230V45" stroke="currentColor" opacity=".25"/><path d="M70 218C130 215 130 185 180 183S225 132 270 139 322 76 378 58" stroke="currentColor" stroke-width="2"/><path d="M70 218C130 215 130 185 180 183S225 132 270 139 322 76 378 58V230H70Z" fill="currentColor" opacity=".07"/><g fill="currentColor"><circle cx="70" cy="218" r="4"/><circle cx="180" cy="183" r="4"/><circle cx="270" cy="139" r="4"/><circle cx="378" cy="58" r="5"/></g><circle cx="378" cy="58" r="15" stroke="currentColor" opacity=".4"/><g stroke="currentColor" stroke-dasharray="3 7" opacity=".2"><path d="M180 183V230M270 139V230M378 58V230"/></g><text x="63" y="260" fill="currentColor" font-size="9" letter-spacing="3">ENGAGEMENT</text><text x="310" y="260" fill="currentColor" font-size="9" letter-spacing="3">INTENT ↗</text></svg><p class="visual-note">CONCEPT ILLUSTRATION · NOT MODEL RESULTS</p></div>
+      <details class="spell-details"><summary>Read the case study <span class="detail-sign" aria-hidden="true">+</span></summary><div class="case-content">
                                 <h4>Problem Solved</h4>
                                 <p>Provided data-backed predictions of conversion probability to help teams target high-value users, personalize onboarding flows, and optimize resource allocation for subscription growth.</p>
                                 
@@ -61,22 +62,11 @@
                                 
                                 <h4>Key Learnings</h4>
                                 <p>Deepened expertise in classification workflows and ensemble techniques, strengthened causal analysis practices, gained hands-on experience with balancing and hyperparameter tuning, and improved translating analytics into business recommendations.</p>
-                            </div>
-                            
-                            <div class="project-tech">
-                                <span class="tech-tag">R (tidyverse, caret, randomForest, xgboost)</span>
-                                <span class="tech-tag">Machine Learning (Classification & Clustering)</span>
-                                <span class="tech-tag">Causal Inference & Statistical Modeling</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card-detailed">
-                        <div class="project-info">
-                            <h3>Seoul Bike Sharing Demand Analysis</h3>
-                            <p class="project-description">This project focuses on building an intelligent forecasting engine to predict daily bike rental demand across 8,700+ records from the Seoul public bike system. Using a Python-based analytics pipeline integrated with a relational database, the initiative delivers high-fidelity predictions that support capacity planning, resource allocation, and operational optimization for urban mobility services.</p>
-                            
-                            <div class="project-details">
+                            </div></details>
+    </article><article class="spell-slide" id="project-seoul" aria-labelledby="title-seoul" data-title="Seoul bike demand">
+      <div class="spell-overview"><p class="eyebrow">02 / URBAN MOBILITY</p><h2 id="title-seoul">A smarter ride for the city.</h2><p class="spell-summary">Forecasting bike rental demand using 8,700+ records, weather, and time-based signals to guide fleet distribution and station planning.</p><div class="spell-tags"><span>Python</span><span>SQL</span><span>Regression</span></div><p class="spell-purpose"><span aria-hidden="true">✦</span> Turning city rhythms into planning insights.</p></div>
+      <div class="spell-visual visual-seoul"><div class="visual-heading"><span>FIELD NOTES / 02</span><span aria-hidden="true">✧</span></div><div class="spell-metric"><strong>8,700+</strong><span>rental records explored</span></div><svg viewBox="0 0 440 290" fill="none" aria-hidden="true"><g stroke="currentColor" opacity=".15"><path d="M35 65H405M35 120H405M35 175H405M35 230H405M85 40V245M175 40V245M265 40V245M355 40V245"/></g><path d="m85 175 90-55 90 55 90-110" stroke="currentColor" stroke-width="2" stroke-dasharray="5 5"/><g fill="currentColor"><circle cx="85" cy="175" r="7"/><circle cx="175" cy="120" r="7"/><circle cx="265" cy="175" r="7"/><circle cx="355" cy="65" r="7"/></g><g stroke="currentColor" opacity=".4"><circle cx="85" cy="175" r="25"/><circle cx="175" cy="120" r="34"/><circle cx="265" cy="175" r="22"/><circle cx="355" cy="65" r="29"/></g><text x="40" y="270" fill="currentColor" font-size="9" letter-spacing="3">WEATHER · TIME · DEMAND</text></svg><p class="visual-note">CONCEPT ILLUSTRATION · NOT MODEL RESULTS</p></div>
+      <details class="spell-details"><summary>Read the case study <span class="detail-sign" aria-hidden="true">+</span></summary><div class="case-content">
                                 <h4>Problem Solved</h4>
                                 <p>Provided a data-driven demand prediction model to enable better fleet distribution, maintenance scheduling, and strategic planning—reducing overstocking and underresourcing across stations.</p>
                                 
@@ -90,22 +80,11 @@
                                 
                                 <h4>Key Learnings</h4>
                                 <p>Strengthened Python analytics and regression modeling skills, improved database integration workflows, and enhanced data storytelling to turn model outputs into actionable operational guidance.</p>
-                            </div>
-                            
-                            <div class="project-tech">
-                                <span class="tech-tag">Python (pandas, NumPy, scikit-learn)</span>
-                                <span class="tech-tag">SQL / Relational Databases</span>
-                                <span class="tech-tag">Regression & Predictive Analytics</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card-detailed">
-                        <div class="project-info">
-                            <h3>PwC Capstone Consultant: Building Process-Specific Models with Human Knowledge</h3>
-                            <p class="project-description">A 13-week capstone blueprint combining explainable AI, process mining, and human-in-the-loop feedback to build process-specific, transparent AI models for enterprise workflows.</p>
-                            
-                            <div class="project-details">
+                            </div></details>
+    </article><article class="spell-slide" id="project-pwc" aria-labelledby="title-pwc" data-title="Human-aligned AI">
+      <div class="spell-overview"><p class="eyebrow">03 / EXPLAINABLE AI · PwC CAPSTONE</p><h2 id="title-pwc">Intelligence with a human lens.</h2><p class="spell-summary">A 13-week capstone blueprint combining explainable AI, process mining, and expert feedback to make enterprise models more transparent.</p><div class="spell-tags"><span>Explainable AI</span><span>Process mining</span><span>Human-in-the-loop</span></div><p class="spell-purpose"><span aria-hidden="true">✦</span> Bringing domain expertise into the model loop.</p></div>
+      <div class="spell-visual visual-pwc"><div class="visual-heading"><span>FIELD NOTES / 03</span><span aria-hidden="true">✧</span></div><div class="spell-metric"><strong>13</strong><span>week capstone blueprint</span></div><svg viewBox="0 0 440 290" fill="none" aria-hidden="true"><path d="M150 105h140M290 105l-12-6m12 6-12 6M310 130v64H130v-64" stroke="currentColor" opacity=".6"/><path d="m130 130-6 12m6-12 6 12" stroke="currentColor"/><circle cx="130" cy="105" r="40" stroke="currentColor"/><circle cx="310" cy="105" r="40" stroke="currentColor"/><path d="m130 82 6 16 17 7-17 6-6 17-6-17-17-6 17-7Z" stroke="currentColor"/><circle cx="310" cy="94" r="10" stroke="currentColor"/><path d="M292 123a18 18 0 0 1 36 0" stroke="currentColor"/><rect x="172" y="174" width="96" height="38" rx="19" fill="var(--surface)" stroke="currentColor"/><text x="220" y="198" text-anchor="middle" fill="currentColor" font-size="9" letter-spacing="2">FEEDBACK</text><text x="130" y="52" text-anchor="middle" fill="currentColor" font-size="9" letter-spacing="2">MODEL</text><text x="310" y="52" text-anchor="middle" fill="currentColor" font-size="9" letter-spacing="2">EXPERT</text><text x="220" y="265" text-anchor="middle" fill="currentColor" font-size="9" letter-spacing="3">EXPLAIN · REFINE · REPEAT</text></svg><p class="visual-note">CONCEPT ILLUSTRATION · NOT MODEL RESULTS</p></div>
+      <details class="spell-details"><summary>Read the case study <span class="detail-sign" aria-hidden="true">+</span></summary><div class="case-content">
                                 <h4>Problem Solved</h4>
                                 <p>Addresses enterprise adoption barriers such as lack of transparency, misalignment with domain expertise, and fragmented event-log data by designing a human-aligned machine intelligence framework that balances performance with operational constraints.</p>
                                 
@@ -118,193 +97,67 @@
                                 
                                 <h4>Key Learnings</h4>
                                 <p>Advanced XAI and process-mining knowledge, strengthened design of human-in-the-loop systems, and improved ability to translate technical research into enterprise-ready operational frameworks.</p>
-                            </div>
-                            
-                            <div class="project-tech">
-                                <span class="tech-tag">Explainable AI (XAI) Frameworks</span>
-                                <span class="tech-tag">Process Mining & Event-Log Analytics</span>
-                                <span class="tech-tag">Human-in-the-Loop Feedback Systems</span>
-                            </div>
-                            
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                            </div></details>
+    </article>
+<article class="spell-slide" id="project-tracyai" aria-labelledby="title-tracyai" data-title="AI for vendor risk">
+      <div class="spell-overview">
+        <p class="eyebrow">04 / GENERATIVE AI · MPHASIS</p>
+        <h2 id="title-tracyai">From document overload to faster decisions.</h2>
+        <p class="spell-summary">At Mphasis, I helped build TracyAI, an AI powered vendor risk assessment platform. I developed document processing and retrieval workflows that helped analysts find relevant evidence and complete assessments faster.</p>
+        <div class="spell-tags"><span>Python</span><span>AWS Bedrock</span><span>RAG</span><span>LangGraph</span></div>
+        <p class="spell-purpose"><span aria-hidden="true">✦</span> Turning complex vendor documents into answers grounded in evidence.</p>
+        <p class="spell-credit">Professional work · Data Science Intern at Mphasis</p>
+      </div>
+      <div class="spell-visual visual-tracy">
+        <div class="visual-heading"><span>FIELD NOTES / 04</span><span aria-hidden="true">✧</span></div>
+        <div class="spell-metric"><strong>Under 7 days</strong><span>Assessment time reduced from approximately one month</span><small>Platform outcome · achieved by the team</small></div>
+        <div class="tracy-workflow" role="group" aria-labelledby="tracy-workflow-heading">
+          <p class="workflow-heading" id="tracy-workflow-heading">SIMPLIFIED WORKFLOW <span>Select a stage</span></p>
+          <details class="workflow-stage" name="tracy-workflow" open>
+            <summary><span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l4 4v14H6zM15 3v5h4M9 12h7M9 16h7M3 7v14" stroke="currentColor" stroke-width="1.2"/></svg></span><span>Documents</span><span class="workflow-step-number" aria-hidden="true">01</span></summary>
+            <p>Python and Unstructured.io prepare documents, with OCR fallback for scanned pages.</p>
+          </details>
+          <details class="workflow-stage" name="tracy-workflow">
+            <summary><span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.2"/><path d="m15 15 6 6M7 8h6M7 11h4" stroke="currentColor" stroke-width="1.2"/></svg></span><span>Evidence retrieval</span><span class="workflow-step-number" aria-hidden="true">02</span></summary>
+            <p>Amazon Titan embeddings help retrieve relevant passages from the processed documents.</p>
+          </details>
+          <details class="workflow-stage" name="tracy-workflow">
+            <summary><span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m12 2 3 7 7 3-7 3-3 7-3-7-7-3 7-3z" stroke="currentColor" stroke-width="1.2"/></svg></span><span>AI analysis</span><span class="workflow-step-number" aria-hidden="true">03</span></summary>
+            <p>Amazon Bedrock Nova generates responses grounded in the retrieved evidence.</p>
+          </details>
+          <details class="workflow-stage" name="tracy-workflow">
+            <summary><span class="workflow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.2"/><path d="M2 22v-3a7 7 0 0 1 14 0v3M16 11l2 2 4-5" stroke="currentColor" stroke-width="1.2"/></svg></span><span>Analyst review</span><span class="workflow-step-number" aria-hidden="true">04</span></summary>
+            <p>Analysts review the evidence and evidence-grounded responses to support vendor risk assessments.</p>
+          </details>
+        </div>
+        <p class="visual-note">ILLUSTRATIVE DOCUMENTS · SIMPLIFIED WORKFLOW</p>
+      </div>
+      <details class="spell-details"><summary>Read the case study <span class="detail-sign" aria-hidden="true">+</span></summary><div class="case-content">
+        <h4>Problem solved</h4>
+        <p>Vendor risk analysts reviewed hundreds of documents manually to locate evidence and prepare assessments. The process took approximately one month and involved substantial repetitive work.</p>
+        <h4>My contribution</h4>
+        <p>As a Data Science Intern at Mphasis, I contributed to TracyAI by building document processing and retrieval workflows. My work connected document ingestion, relevant evidence retrieval, and evidence-grounded responses to support analysts reviewing vendor risk.</p>
+        <h4>Technical approach</h4>
+        <ol>
+          <li>Process documents using Python and Unstructured.io, with OCR fallback for scanned content.</li>
+          <li>Generate embeddings using Amazon Titan to support retrieval of relevant document passages.</li>
+          <li>Use Amazon Bedrock Nova models to generate responses grounded in retrieved evidence.</li>
+          <li>Coordinate workflows using LangGraph and LangChain, with Langfuse for tracing and evaluation.</li>
+        </ol>
+        <h4>Outcome</h4>
+        <p>Through the team’s work, the platform reduced assessment time from approximately one month to under seven days and cut manual effort by 60%. These are platform outcomes achieved through the team’s combined contributions.</p>
+        <h4>Key takeaways</h4>
+        <p>Reliable document processing and relevant retrieval are essential to useful AI responses. The experience strengthened my ability to connect AI engineering with a practical business workflow.</p>
+      </div></details>
+    </article>
+      <div class="spell-controls" hidden><div class="spell-progress"><span id="project-counter" aria-live="polite" aria-atomic="true">01 / 04 · Conversion prediction</span><div class="progress-track" aria-hidden="true"><span></span></div></div><div class="spell-arrows"><button type="button" id="previous-project" aria-label="Previous project"><span aria-hidden="true">←</span></button><button type="button" id="next-project" aria-label="Next project"><span aria-hidden="true">→</span></button></div></div>
+    </div>
+  </div>
+  <p class="spellbook-footnote">Made with data, driven by questions. <a href="contact.html">Have an interesting one? Let’s talk ↗</a></p>
+</div></section>
+    <div class="container chapter-next"><span>THE NEXT CHAPTER</span><a href="blog.html">Experience <span aria-hidden="true">↗</span></a><a class="back-platform" href="index.html#journey">Return to the journey map</a></div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Sourabrata Samanta. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <style>
-        :root {
-            --accent-teal: #0891b2;
-        }
-
-        .projects-hero {
-            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
-            color: white;
-            padding: 100px 0 50px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .projects-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .projects-hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 1;
-        }
-
-        .projects-subtitle {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            font-weight: 500;
-            letter-spacing: -0.3px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .projects-content {
-            padding: 80px 0;
-        }
-
-        .projects-grid {
-            display: grid;
-            gap: 3rem;
-        }
-
-        .project-card-detailed {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .project-card-detailed:nth-child(1) {
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-        }
-
-        .project-card-detailed:nth-child(2) {
-            background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
-        }
-
-        .project-card-detailed:nth-child(3) {
-            background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
-        }
-
-        .project-info {
-            padding: 2rem;
-        }
-
-        .project-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #1e293b;
-        }
-
-        .project-description {
-            color: #64748b;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .project-details h4 {
-            color: #1e293b;
-            margin: 1.5rem 0 0.5rem;
-            font-size: 1rem;
-        }
-
-        .project-details p {
-            color: #64748b;
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        .project-tech {
-            display: flex;
-            gap: 0.5rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        /* Replace button/promo accents with teal */
-        .project-links .btn.btn-primary {
-            background: var(--accent-teal);
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-        }
-
-        .project-links .btn.btn-secondary {
-            background: transparent;
-            color: var(--accent-teal);
-            border: 1px solid var(--accent-teal);
-            border-radius: 6px;
-        }
-
-        @media (max-width: 768px) {
-            .projects-hero h1 {
-                font-size: 2rem;
-            }
-            
-            .project-links {
-                flex-direction: column;
-            }
-        }
-    </style>
-
-    <script>
-        function toggleMobileMenu() {
-            const navMenu = document.querySelector('.nav-menu');
-            const toggle = document.querySelector('.mobile-menu-toggle');
-            navMenu.classList.toggle('active');
-            toggle.classList.toggle('active');
-        }
-
-        function createParticles() {
-            const container = document.getElementById('particleCanvas');
-            const particleCount = 15;
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                const size = Math.random() * 60 + 20;
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-                container.appendChild(particle);
-            }
-        }
-        createParticles();
-    </script>
+    <footer><div class="container footer-inner"><a class="footer-brand" href="index.html">Sourabrata Samanta <span>✦</span></a><p>Built with curiosity. Finished with a little magic.</p><a href="contact.html">Let’s create something ↗</a><small>© 2026 Sourabrata Samanta</small></div></footer>
 </body>
 </html>

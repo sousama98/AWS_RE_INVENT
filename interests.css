@@ -1,0 +1,114 @@
+/* Outside the work — a warm collection of illustrated ephemera. */
+body.interests-page main > section:first-child { text-align: left; border-bottom: 0; padding: 44px 0 26px !important; }
+body.interests-page main > section:first-child .container { max-width: 1280px; }
+body.interests-page main > section:first-child h1 { font-size: clamp(38px,4vw,57px) !important; line-height: 1.1 !important; letter-spacing: -1.5px !important; margin-bottom: 20px !important; }
+body.interests-page main > section:first-child p:not(.eyebrow) { font-size: 13px !important; }
+.collection-intro-rule { display: flex; align-items: center; justify-content: space-between; gap: 25px; border-top: 1px solid var(--line); padding-top: 21px; margin-top: 32px; color: var(--muted); font-size: 13px; letter-spacing: 1.2px; line-height: 1.7; }
+.collection-intro-rule > span:last-child { color: var(--gold); font-size: 13px; }
+body.interests-page main > section.interests-collection { padding: 0 0 60px !important; }
+.interests-grid { display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); gap: 22px; align-items: start; }
+.interest-card { --collection-accent: var(--gold); --art-ink: #0c1d19; --ticket-paper: #d8c7a5; --sleeve-paper: #8f7550; --poster-paper: #322d23; --sketch-paper: #27382c; --stadium-field: #253c2b; --comic-paper: #283334; grid-column: span 4; background: var(--surface); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; position: relative; transition: border-color .2s, background .2s; }
+.interest-card::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' opacity='.1' d='M0 0h160v160H0z'/%3E%3C/svg%3E"); opacity: .13; pointer-events: none; }
+.interest-card:hover, .interest-card[open] { border-color: var(--collection-accent); }
+.interest-united { grid-column: span 5; --collection-accent: #c08073; background: linear-gradient(130deg,#6f302523,var(--surface)); }
+.interest-cinema { grid-column: span 7; --collection-accent: #b8b79a; }
+.interest-iu { grid-column: span 7; --collection-accent: #c6958f; background: linear-gradient(145deg,var(--surface),#74382d1a); }
+.interest-marvel { grid-column: span 5; --collection-accent: #aebfc0; }
+.interest-artwork { --collection-accent: #aac0a0; }
+.interest-rock { --collection-accent: #cfb281; }
+.interest-card > summary { display: flex; flex-direction: column; list-style: none; padding: 22px 25px 26px; cursor: pointer; position: relative; min-height: 325px; }
+.interest-card > summary::-webkit-details-marker { display: none; }
+.interest-card > summary:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: -6px; border-radius: 3px; }
+.interest-card-label { display: flex; justify-content: space-between; align-items: center; gap: 20px; font-size: 13px; letter-spacing: 1.3px; color: var(--collection-accent); }
+.interest-number { font: italic 13px var(--serif); letter-spacing: 0; }
+.interest-art { display: grid; place-items: center; color: var(--collection-accent); flex-grow: 1; padding-block: 14px; }
+.interest-art svg { display: block; width: 100%; max-width: 450px; height: 165px; overflow: visible; transition: transform .3s ease; }
+.interest-card:hover .interest-art svg { transform: translateY(-3px) rotate(-1deg); }
+.interest-card-bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 18px; }
+.interest-card-title { font: 26px/1.17 var(--serif); letter-spacing: -.65px; color: var(--text); max-width: 400px; }
+.interest-open-mark { display: grid; place-items: center; width: 28px; height: 28px; flex: 0 0 28px; border: 1px solid var(--line); border-radius: 50%; color: var(--collection-accent); font: 15px/1 var(--serif); transition: transform .2s; margin-bottom: 2px; }
+.interest-card[open] .interest-open-mark { transform: rotate(45deg); }
+.interest-expanded { border-top: 1px solid var(--line); padding: 22px 25px; position: relative; }
+.collection-heading { margin-bottom: 20px; }
+.collection-heading h3 { color: var(--text); font: 21px/1.25 var(--serif); letter-spacing: -.4px; }
+.collection-heading > span { display: block; color: var(--collection-accent); font-size: 13px; letter-spacing: .8px; margin-top: 7px; }
+.personal-interest-story, .verified-interest-note { color: var(--muted); font-size: 13px; line-height: 1.85; margin-bottom: 19px; }
+.interest-context-link { display: inline-block; color: var(--gold); font-size: 13px; text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 3px; }
+.interest-context-link:hover { border-color: var(--gold); }
+.illustration-caption { color: var(--muted); font: italic 13px/1.7 var(--serif); margin-top: 22px; }
+.interest-expanded [hidden] { display: none !important; }
+.interest-favourites { list-style: none; counter-reset: favourites; padding: 0; }
+.interest-favourites > li { counter-increment: favourites; border-top: 1px solid var(--line); padding: 17px 0 17px 27px; position: relative; }
+.interest-favourites > li::before { content: '0' counter(favourites); position: absolute; top: 19px; left: 0; color: var(--gold); font: italic 13px var(--serif); }
+.favourite-kind { color: var(--collection-accent); text-transform: uppercase; font-size: 13px; letter-spacing: 1px; }
+.interest-favourites h4, .character-panel h4 { font: 15px/1.3 var(--serif); color: var(--text); margin-top: 5px; }
+.interest-favourites p { font-size: 13px; color: var(--muted); line-height: 1.8; margin-top: 9px; }
+.interest-photos { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 13px; margin-block: 20px; }
+.interest-photos img { display: block; width: 100%; height: 180px; object-fit: cover; border: 1px solid var(--line); }
+.interest-photos figcaption { font-size: 13px; color: var(--muted); margin-top: 9px; }
+.collection-label { color: var(--collection-accent); font-size: 13px; letter-spacing: 1.2px; margin-bottom: 16px; }
+.director-tabs, .character-tabs { display: flex; flex-wrap: wrap; gap: 7px 17px; margin-bottom: 19px; }
+.director-tabs button, .character-tabs button { background: transparent; border: 0; border-bottom: 1px solid transparent; padding: 6px 0; text-align: left; color: var(--muted); font-size: 13px; cursor: pointer; }
+.director-tabs button[aria-selected="true"], .character-tabs button[aria-selected="true"] { color: var(--collection-accent); border-bottom-color: var(--collection-accent); }
+.director-tabs button:hover, .character-tabs button:hover { color: var(--text); }
+.director-panel, .character-panel { padding: 20px; background: var(--ink); border: 1px solid var(--line); position: relative; }
+.director-panel::before, .director-panel::after { content: ''; position: absolute; left: -1px; right: -1px; height: 3px; background: repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 20px); }
+.director-panel::before { top: -1px; }.director-panel::after { bottom: -1px; }
+.director-frame-number { color: var(--muted); font-size: 13px; letter-spacing: 1px; }
+.director-panel h4 { font: 25px/1.25 var(--serif); color: var(--text); margin: 13px 0 5px; }
+.director-personal-content { margin-top: 20px; }
+.record-disc { transform-origin: 219px 103px; transition: transform .7s ease; }
+.interest-music:hover .record-disc, .interest-music[open] .record-disc { transform: rotate(24deg); }
+.interest-expanded audio { display: block; width: 100%; max-width: 100%; margin-top: 23px; }
+body.interests-page main > section.common-ground { text-align: center; border-top: 1px solid var(--line); padding: 45px 0 65px !important; }
+.common-ground > .container > span { display: block; color: var(--gold); font-size: 35px; margin-bottom: 12px; }
+.common-ground h2 { font-size: clamp(32px,3.5vw,46px); margin-bottom: 26px; }
+@media(max-width:1200px) { .interest-card > summary { padding-inline: 21px; }.interest-card-title { font-size: 23px; }.interest-card-label { font-size: 13px; } }
+@media(max-width:900px) {
+  .interests-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }.interest-card { grid-column: span 1; }.interest-marvel { grid-column: span 2; }.interest-card > summary { min-height: 320px; }.interest-art svg { height: 150px; }.collection-intro-rule > span:last-child { display: none; }
+}
+@media(max-width:600px) {
+  body.interests-page main > section:first-child { padding: 34px 0 22px !important; }body.interests-page main > section:first-child h1 { font-size: 35px !important; }body.interests-page main > section:first-child p:not(.eyebrow) { font-size: 13px !important; }
+  .interests-grid { grid-template-columns: minmax(0,1fr); gap: 17px; }.interest-card { grid-column: 1; }.interest-card > summary { min-height: 300px; padding: 20px 22px 24px; }.interest-card-title { font-size: 25px; }.interest-card-label { font-size: 13px; }.interest-art svg { height: 155px; }.interest-cinema .interest-art svg { height: 130px; }.interest-expanded { padding: 22px; }.director-panel { padding: 18px; }.director-panel h4 { font-size: 23px; }.director-tabs { gap: 7px 15px; }.interest-photos { grid-template-columns: 1fr; }.common-ground h2 { font-size: 33px; }.collection-intro-rule { margin-top: 27px; }
+}
+@media(prefers-reduced-motion:reduce) { .interests-page *, .interests-page *::before, .interests-page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+.interest-card[open] .interest-expanded { animation: collection-reveal .18s ease both; }
+@keyframes collection-reveal { from { opacity: .5; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+.interest-united .interest-art { color: #96574c; }
+html[data-theme="parchment"] .interest-united { --collection-accent: #96574c; }
+html[data-theme="parchment"] .interest-cinema { --collection-accent: #62644e; }
+html[data-theme="parchment"] .interest-rock { --collection-accent: #856332; }
+html[data-theme="parchment"] .interest-artwork { --collection-accent: #537052; }
+html[data-theme="parchment"] .interest-iu { --collection-accent: #944e4b; }
+html[data-theme="parchment"] .interest-marvel { --collection-accent: #49626b; }
+html[data-theme="parchment"] .interest-cinema .interest-art { color: #b8b79a; }
+html[data-theme="parchment"] .interest-rock .interest-art { color: #cfb281; }
+html[data-theme="parchment"] .interest-artwork .interest-art { color: #869d7c; }
+html[data-theme="parchment"] .interest-marvel .interest-art { color: #aebfc0; }
+/* Photographic collection covers, stored locally with source credits. */
+.interest-photo-frame { display: block; margin: 20px 0 24px; padding: 0; border: 1px solid var(--line); overflow: hidden; position: relative; min-height: 200px; background: #101b17; }
+.interest-photo { display: block; width: 100%; height: 200px; object-fit: cover; transition: transform .35s ease; }
+.interest-card:hover .interest-photo { transform: scale(1.025); }
+.interest-united .interest-photo { object-position: 50% 65%; }
+.interest-music .interest-photo { object-position: 50% 80%; }
+.interest-cinema .interest-photo-frame { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); background: var(--ink); }
+.interest-cinema .interest-photo { height: 220px; object-fit: contain; background: #181b17; }
+.cinema-photo-names { display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 15px 20px; font-size: 13px; line-height: 1.4; color: var(--muted); }
+.interest-rock .interest-photo { object-fit: contain; }
+.interest-marvel .interest-photo-frame { background: #e7e0d0; padding: 20px; }
+.interest-marvel .interest-photo { object-fit: contain; height: 160px; }
+.interest-roster-preview { font-size: 13px; line-height: 1.75; color: var(--muted); margin-top: 17px; }
+.image-credit { font: 13px/1.75 var(--sans); }
+.image-credit a { color: var(--muted); text-underline-offset: 4px; }
+.image-credit a:hover { color: var(--gold); }
+.artist-roster { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 18px; padding: 0; list-style: none; margin-bottom: 24px; }
+.artist-roster li { border-top: 1px solid var(--line); padding: 12px 0; color: var(--text); font-size: 14px; line-height: 1.6; }
+.artist-kind { display: block; color: var(--muted); font-size: 13px; margin-top: 3px; }
+.interest-rock .interest-photos { grid-template-columns: 1fr; }
+.featured-film { display: inline-block; border: 1px solid var(--line); color: var(--text); padding: 8px 12px; font-size: 14px; margin: 0 0 22px; }
+@media(max-width:600px) {
+  .interest-photo-frame { margin: 19px 0 23px; min-height: 180px; }.interest-photo { height: 180px; }
+  .interest-cinema .interest-photo { height: 210px; }.cinema-photo-names { gap: 6px; padding: 13px 11px; font-size: 13px; }
+  .interest-marvel .interest-photo { height: 140px; }.artist-roster { grid-template-columns: 1fr; }
+}
+.interest-music:hover .interest-photo, .interest-music[open] .interest-photo { transform: scale(1.025) rotate(.6deg); }

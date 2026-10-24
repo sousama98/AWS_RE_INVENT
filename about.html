@@ -5,33 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Sourabrata Samanta</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#0c1d19">
+    <link rel="stylesheet" href="enchanted.css">
+    <script src="enchanted.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="assets/illustrations/monogram.svg">
+    <link rel="preload" as="image" media="(prefers-reduced-motion: no-preference)" href="assets/illustrations/sourabrata-wizard-about.png">
+    <link rel="stylesheet" href="page-spell.css">
+    <script>if (!matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.classList.add('spell-pending'); setTimeout(() => document.documentElement.classList.remove('spell-pending'), 4000); }</script>
+    <script src="page-spell.js" defer></script>
 </head>
 <body>
-    <div class="animated-bg" id="particleCanvas"></div>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Sourabrata Samanta</div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Work</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav aria-label="Main navigation">
+      <div class="nav-container">
+        <a class="brand" href="index.html" aria-label="Sourabrata Samanta, home"><span class="brand-mark" aria-hidden="true">S<span>✦</span></span><span class="brand-name">Sourabrata Samanta<small>A LITTLE LOGIC. A LITTLE MAGIC.</small></span></a>
+        <ul class="nav-menu" id="main-menu"><li><a href="index.html">Home · 9¾</a></li>
+<li><a href="about.html" class="active" aria-current="page">About</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="blog.html">Experience</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="certifications.html">Credentials</a></li>
+<li><a href="interests.html">Interests</a></li>
+<li><a href="contact.html">Contact</a></li></ul>
+        <div class="nav-actions"><button class="light-switch" type="button" aria-pressed="false" aria-label="Switch to parchment theme"><span aria-hidden="true">☼</span> <span class="light-label">Lumos</span></button><button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button></div>
+      </div>
     </nav>
 
-    <main style="margin-top: 70px;">
+    <main id="main-content" tabindex="-1" style="margin-top: 70px;">
         <section class="about-hero">
             <div class="container">
-                <h1>About Me</h1>
+                <p class="eyebrow">01 / THE WIZARD BEHIND THE WORK</p><h1>About Me</h1>
                 <p class="about-subtitle">Bridging product thinking and infrastructure to make AI work in the real world.</p>
             </div>
         </section>
@@ -102,13 +105,10 @@
                 </div>
             </div>
         </section>
+    <div class="container chapter-next"><span>THE NEXT CHAPTER</span><a href="projects.html">Projects <span aria-hidden="true">↗</span></a><a class="back-platform" href="index.html#journey">Return to the journey map</a></div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Sourabrata Samanta. All rights reserved.</p>
-        </div>
-    </footer>
+    <footer><div class="container footer-inner"><a class="footer-brand" href="index.html">Sourabrata Samanta <span>✦</span></a><p>Built with curiosity. Finished with a little magic.</p><a href="contact.html">Let’s create something ↗</a><small>© 2026 Sourabrata Samanta</small></div></footer>
 
     <style>
         :root {
@@ -229,7 +229,7 @@
         }
 
         .work-item h4 {
-            font-size: 1.2rem;
+            font-size: 15px;
             color: #1e293b;
             margin-bottom: 0.25rem;
         }
@@ -242,7 +242,7 @@
 
         .work-dates {
             color: #64748b;
-            font-size: 0.9rem;
+            font-size: 14.4px;
             margin-bottom: 0.75rem;
         }
 
@@ -284,7 +284,7 @@
         }
 
         .partner-logos h3 {
-            font-size: 1rem;
+            font-size: 15px;
             margin-bottom: 0.75rem;
             color: #1e293b;
         }
@@ -345,7 +345,7 @@
             padding: 0.5rem;
             border-radius: 8px;
             text-align: center;
-            font-size: 0.875rem;
+            font-size: 14px;
             transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, color 180ms ease;
             cursor: default;
             will-change: transform, box-shadow;
@@ -412,33 +412,5 @@
             }
         }
     </style>
-
-    <script>
-        function toggleMobileMenu() {
-            const navMenu = document.querySelector('.nav-menu');
-            const toggle = document.querySelector('.mobile-menu-toggle');
-            if (!navMenu || !toggle) return;
-            toggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        }
-
-        function createParticles() {
-            const container = document.getElementById('particleCanvas');
-            const particleCount = 15;
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                const size = Math.random() * 60 + 20;
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-                container.appendChild(particle);
-            }
-        }
-        createParticles();
-    </script>
 </body>
 </html>

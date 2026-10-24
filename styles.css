@@ -108,7 +108,7 @@ nav {
     text-decoration: none;
     color: #475569;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 15px;
     transition: all 0.3s ease;
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -229,7 +229,7 @@ nav {
 }
 
 .hero-description {
-    font-size: 1.1rem;
+    font-size: 15px;
     margin-bottom: 2rem;
     opacity: 0.9;
     line-height: 1.6;
@@ -252,7 +252,7 @@ nav {
     text-decoration: none;
     border-radius: 10px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 15px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -355,7 +355,7 @@ nav {
     color: #475569;
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
-    font-size: 0.875rem;
+    font-size: 14px;
 }
 
 .project-link {
@@ -380,7 +380,7 @@ nav {
     color: #475569;
     border: none;
     border-radius: 5px;
-    font-size: 0.875rem;
+    font-size: 14px;
     cursor: default;
 }
 
@@ -440,11 +440,11 @@ footer {
     }
     
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 15px;
     }
     
     .hero-description {
-        font-size: 1rem;
+        font-size: 15px;
     }
     
     .hero-buttons {

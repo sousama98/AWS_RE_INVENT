@@ -1,0 +1,115 @@
+/* An academic journal: qualifications at a glance, stories at your own pace. */
+body.education-page main > section:first-child { padding: 42px 0 30px !important; border-bottom: 0; text-align: left; }
+body.education-page main > section:first-child .container { max-width: 1280px; }
+body.education-page main > section:first-child .eyebrow { margin-bottom: 15px !important; }
+body.education-page main > section:first-child h1 { font-size: clamp(36px,3.8vw,56px) !important; line-height: 1.09 !important; margin-bottom: 18px !important; letter-spacing: -1.8px !important; }
+body.education-page main > section:first-child h1 em { color: var(--text); }
+body.education-page main > section:first-child p:not(.eyebrow) { font-size: 13px !important; }
+body.education-page main > section.academic-content { padding: 0 0 44px !important; }
+.campus-chapters { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; position: relative; margin-bottom: 25px; }
+.campus-chapters::before { content: ''; position: absolute; top: 18px; left: 16px; right: 16px; height: 1px; background: var(--line); pointer-events: none; }
+.campus-chapters > button { display: flex; align-items: flex-start; gap: 14px; position: relative; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--muted); padding: 0 0 17px; text-align: left; cursor: pointer; transition: border-color .2s, color .2s; min-width: 0; }
+.campus-chapter-number { display: grid; place-items: center; width: 36px; height: 36px; flex: 0 0 36px; border: 1px solid var(--line); border-radius: 50%; color: var(--gold); background: var(--ink); font: italic 15px var(--serif); position: relative; }
+.campus-chapter-info { display: block; position: relative; margin-top: 42px; margin-left: -50px; padding-right: 12px; min-width: 0; }
+.campus-chapter-name { font: 25px/1.25 var(--serif); display: block; color: var(--muted); }
+.campus-chapter-degree { font-size: 13px; color: var(--muted); display: block; margin-top: 8px; line-height: 1.7; }
+.campus-chapter-mark { position: relative; margin-top: 45px; margin-left: auto; font-size: 21px; color: var(--gold); opacity: .3; }
+.campus-chapters > button[aria-selected="true"], .campus-chapters > button:hover { border-color: var(--gold); }
+.campus-chapters > button[aria-selected="true"] .campus-chapter-number { background: var(--gold); color: var(--ink); }
+.campus-chapters > button[aria-selected="true"] .campus-chapter-name { color: var(--text); }
+.campus-chapters > button[aria-selected="true"] .campus-chapter-mark, .campus-chapters > button:hover .campus-chapter-mark { opacity: 1; }
+.academic-journal { border: 1px solid var(--line); border-radius: 3px; background: var(--surface); overflow: hidden; position: relative; }
+.academic-journal::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' opacity='.13' filter='url(%23p)' d='M0 0h160v160H0z'/%3E%3C/svg%3E"); opacity: .14; pointer-events: none; z-index: 1; }
+.journal-chapter { display: grid; grid-template-columns: 1fr 2fr; --campus-accent: #bd9794; }
+.chapter-kiit { --campus-accent: #92b49b; }
+html[data-theme="parchment"] .chapter-iu { --campus-accent: #894e4e; }
+html[data-theme="parchment"] .chapter-kiit { --campus-accent: #476d4e; }
+.academic-content [hidden] { display: none !important; }
+.academic-record { padding: 29px 30px 22px; border-right: 1px solid var(--line); background: linear-gradient(110deg,transparent 85%,#00000015); position: relative; }
+.academic-record::before { content: ''; position: absolute; left: -1px; top: 30px; height: 45px; width: 3px; background: var(--campus-accent); }
+.record-heading { display: flex; justify-content: space-between; align-items: center; gap: 15px; margin-bottom: 21px; }
+.record-heading > span { font-size: 13px; letter-spacing: 1.6px; color: var(--campus-accent); }
+.record-heading img { width: 43px; height: 43px; object-fit: contain; background: #fff; padding: 5px; border: 1px solid var(--line); border-radius: 2px; }
+.campus-location { font-size: 13px; margin-bottom: 8px; }
+.campus-location a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); text-underline-offset: 4px; }
+.campus-location a:hover { color: var(--gold); }
+.academic-record h2 { font: 29px/1.2 var(--serif); letter-spacing: -.6px; max-width: 290px; }
+.record-school { color: var(--campus-accent); font-size: 13px; margin-top: 9px; }
+.record-degree { font-size: 13px; line-height: 1.8; margin-top: 19px; max-width: 250px; }
+.degree-facts { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 22px; }
+.degree-facts > div { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; border-top: 1px solid var(--line); padding-top: 12px; }
+.degree-facts dt { color: var(--muted); font-size: 13px; letter-spacing: 1.6px; flex-shrink: 0; text-transform: uppercase; }
+.degree-facts dd { font-size: 13px; color: var(--text); text-align: right; }
+.campus-vignette { position: relative; margin-top: 32px; color: var(--campus-accent); }
+.campus-vignette svg { display: block; width: 100%; height: auto; opacity: .45; }
+.academic-stamp { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 58px; height: 58px; border: 1px solid currentColor; outline: 1px solid var(--line); outline-offset: -5px; border-radius: 50%; font-size: 13px; letter-spacing: 1px; line-height: 1.4; transform: rotate(-12deg); position: absolute; right: -5px; top: 0; background: var(--surface); }
+.academic-stamp span { font-size: 13px; margin-top: 2px; }
+.record-footnote { font: italic 13px/1.5 var(--serif); margin-top: 9px; color: var(--muted); }
+.journal-story { min-width: 0; padding: 34px 42px 22px; display: flex; flex-direction: column; }
+.journal-story-header > p { font-size: 13px; letter-spacing: 1.7px; color: var(--campus-accent); margin-bottom: 18px; }
+.journal-story-header h2 { font: 36px/1.15 var(--serif); letter-spacing: -.9px; max-width: 530px; margin-bottom: 27px; }
+.journal-section-tabs { display: flex; gap: 26px; border-bottom: 1px solid var(--line); margin-bottom: 26px; }
+.journal-section-tabs button { background: transparent; color: var(--muted); border: 0; border-bottom: 1px solid transparent; margin-bottom: -1px; padding: 0 0 12px; font-size: 13px; cursor: pointer; transition: color .2s, border-color .2s; }
+.journal-section-tabs button[aria-selected="true"] { color: var(--gold); border-color: var(--gold); }
+.journal-section-tabs button:hover { color: var(--text); }
+.journal-section-panel { min-width: 0; }
+.journal-intro { font: 15px/1.7 var(--serif); color: var(--text); max-width: 570px; }
+.focus-preview { margin-top: 27px; }
+.focus-preview > span, .journal-note > span { font-size: 13px; color: var(--campus-accent); letter-spacing: 1.6px; }
+.focus-preview ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; margin-top: 10px; }
+.focus-preview li { padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+.journal-note { padding-top: 24px; margin-top: 27px; border-top: 1px solid var(--line); }
+.journal-note p { font-size: 13px; margin-top: 10px; }
+.section-caption { font: 23px/1.3 var(--serif); color: var(--text); font-weight: 400; margin-bottom: 12px; letter-spacing: -.3px; }
+.section-intro { font-size: 13px; margin-bottom: 20px; }
+.subject-tabs { display: flex; flex-wrap: wrap; gap: 8px 17px; padding-bottom: 17px; }
+.subject-tabs button { padding: 4px 0; border: 0; border-bottom: 1px solid transparent; color: var(--muted); background: transparent; font-size: 13px; text-align: left; cursor: pointer; white-space: normal; }
+.subject-tabs button[aria-selected="true"] { color: var(--campus-accent); border-color: var(--campus-accent); }
+.subject-tabs button:hover { color: var(--text); }
+.subject-panel { border-left: 2px solid var(--campus-accent); padding: 15px 19px; background: var(--ink); margin-top: 3px; }
+.subject-panel .subject-label { font-size: 13px; color: var(--muted); letter-spacing: 1.4px; margin-bottom: 9px; }
+.subject-panel h4 { font: 15px/1.3 var(--serif); color: var(--text); margin-bottom: 9px; }
+.subject-panel > p:last-child { color: var(--muted); font-size: 13px; line-height: 1.85; }
+.journal-activities { list-style: none; margin-top: 15px; }
+.journal-activities li { padding: 12px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 5px; }
+.journal-activities strong { font: 15px var(--serif); color: var(--text); }
+.journal-activities span { font-size: 13px; color: var(--muted); }
+.journal-credentials { margin-top: 25px; border-top: 1px solid var(--line); padding-top: 14px; }
+.journal-credentials summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: var(--gold); font-size: 13px; }
+.journal-credentials summary::-webkit-details-marker { display: none; }
+.journal-credentials summary span { color: var(--muted); font: italic 15px var(--serif); }
+.journal-credentials summary span::after { content: ' +'; color: var(--gold); font: 14px var(--sans); }
+.journal-credentials[open] summary span::after { content: ' −'; }
+.journal-credentials ul { padding-left: 15px; margin-top: 16px; }
+.journal-credentials li { color: var(--muted); font-size: 13px; line-height: 1.9; padding-left: 4px; margin-bottom: 7px; }
+.journal-credentials li::marker { color: var(--campus-accent); }
+.journal-credentials a { font-size: 13px; text-decoration: none; border-bottom: 1px solid var(--line); display: inline-block; margin-top: 12px; padding-bottom: 3px; }
+.journal-credentials a:hover { border-color: var(--gold); }
+.journal-project { display: block; position: relative; padding: 21px 23px; border: 1px solid var(--line); text-decoration: none; border-radius: 2px; margin-top: 16px; transition: border-color .2s, background .2s; }
+.journal-project:hover { border-color: var(--gold); background: var(--ink); }
+.project-note { font-size: 13px; color: var(--campus-accent); letter-spacing: 1.2px; }
+.journal-project h4 { font: 24px/1.3 var(--serif); color: var(--text); margin: 14px 0 12px; letter-spacing: -.4px; }
+.journal-project h4 span { color: var(--gold); font-size: 21px; margin-left: 12px; }
+.journal-project p { font-size: 13px; line-height: 1.85; }
+.project-read { display: inline-block; margin-top: 17px; color: var(--gold); font-size: 13px; }
+.journal-page-number { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding-top: 15px; margin-top: auto; font-size: 13px; letter-spacing: 1.2px; color: var(--muted); }
+.journal-section-panel { margin-bottom: 30px; }
+.academic-journal:not(.is-interactive) .journal-chapter + .journal-chapter { border-top: 1px solid var(--gold); }
+.academic-journal:not(.is-interactive) .journal-section-panel + .journal-section-panel { padding-top: 25px; border-top: 1px solid var(--line); }
+.education-page summary:focus-visible, .education-page [role="tabpanel"]:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+@media(max-width:1050px) {
+  .academic-record { padding-inline: 24px; }.journal-story { padding-inline: 29px; }.journal-story-header h2 { font-size: 33px; }.academic-record h2 { font-size: 26px; }.degree-facts > div { flex-direction: column; gap: 4px; }.degree-facts dd { text-align: left; }.journal-section-tabs { gap: 22px; }
+}
+@media(max-width:760px) {
+  .journal-chapter { grid-template-columns: 1fr; }.academic-record { border-right: 0; border-bottom: 1px solid var(--line); padding: 26px; }.academic-record h2 { max-width: 100%; }.record-degree { max-width: 100%; }.record-heading { margin-bottom: 15px; }.degree-facts { grid-template-columns: 1.5fr 1fr; }.degree-facts > div { flex-direction: column; }.campus-vignette { display: none; }.record-footnote { margin-top: 18px; }.journal-story { padding: 28px 26px 22px; }.journal-page-number { margin-top: 0; }.journal-story-header h2 { max-width: 470px; }
+}
+@media(max-width:540px) {
+  body.education-page main > section:first-child { padding: 35px 0 26px !important; }body.education-page main > section:first-child h1 { font-size: 37px !important; letter-spacing: -1.3px !important; }body.education-page main > section:first-child p:not(.eyebrow) { font-size: 13px !important; max-width: 290px; }
+  .campus-chapters { gap: 20px; margin-bottom: 20px; }.campus-chapter-name { font-size: 15px; }.campus-chapter-degree { font-size: 13px; margin-top: 6px; }.campus-chapter-mark { display: none; }.campus-chapter-info { padding-right: 0; }.campus-chapter-number { height: 32px; width: 32px; flex-basis: 32px; font-size: 14px; }.campus-chapter-info { margin-left: -46px; margin-top: 41px; }.campus-chapters::before { top: 16px; }
+  .academic-record { padding: 24px; }.academic-record h2 { font-size: 28px; }.record-heading img { height: 40px; width: 40px; }.record-degree { font-size: 13px; }.degree-facts dd { font-size: 13px; }.degree-facts { gap: 14px; }.journal-story { padding: 26px 22px 21px; }.journal-story-header h2 { font-size: 30px; margin-bottom: 24px; }.journal-story-header > p { font-size: 13px; letter-spacing: 1.3px; }.journal-section-tabs { gap: 0; justify-content: space-between; }.journal-section-tabs button { font-size: 13px; }.journal-intro { font-size: 15px; }.focus-preview ul { grid-template-columns: 1fr; }.subject-tabs { gap: 8px 15px; }.subject-tabs button { font-size: 13px; }.subject-panel { padding: 14px; }.subject-panel h4 { font-size: 15px; }.journal-project { padding: 18px; }.journal-project h4 { font-size: 22px; }.journal-project p { font-size: 13px; }.degree-facts > div { padding-top: 11px; }
+}
+@media(prefers-reduced-motion:reduce) { .education-page *, .education-page *::before, .education-page *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }
+/* Tabs and qualification labels wrap instead of compressing the text. */
+.journal-section-tabs { flex-wrap: wrap; gap: 12px 24px; }
+.degree-facts dd, .campus-chapter-degree { overflow-wrap: anywhere; }
+@media(max-width:540px) { .journal-section-tabs { justify-content: flex-start; gap: 12px 18px; }.journal-section-tabs button { padding-bottom: 10px; } }

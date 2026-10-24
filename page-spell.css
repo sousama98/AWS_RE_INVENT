@@ -1,0 +1,81 @@
+/* A brief, skippable arrival spell shared by every page. */
+html.spell-pending body::after { content: ''; position: fixed; inset: 0; z-index: 4000; background: #0c1d19; pointer-events: none; animation: spell-safety-clear 0s 4s forwards; }
+@keyframes spell-safety-clear { to { visibility: hidden; } }
+.page-spell { position: fixed; inset: 0; z-index: 4500; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; background: #0c1d19; color: #eee8d9; opacity: 1; transition: opacity .28s ease, visibility .28s; }
+.page-spell::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 40% 50%,#48674c35,transparent 60%); }
+.page-spell.is-leaving { opacity: 0; visibility: hidden; pointer-events: none; }
+.page-spell-topline { position: absolute; top: 35px; left: 40px; right: 40px; display: flex; justify-content: space-between; align-items: center; gap: 20px; z-index: 3; }
+.page-spell-signature { font: 15px var(--serif, Georgia, serif); letter-spacing: .4px; color: #ccb078; }
+.page-spell-skip { background: transparent; border: 1px solid #ccb07855; color: #d6c7a6; padding: 8px 15px; border-radius: 3px; font: 13px var(--sans,sans-serif); cursor: pointer; }
+.page-spell-skip:hover { background: #ccb07815; border-color: #ccb078; }
+.page-spell-skip:focus-visible { outline: 2px solid #ead0a0; outline-offset: 5px; }
+.page-spell-stage { width: min(100%,1000px); height: 560px; position: relative; }
+.page-spell-avatar { position: absolute; left: 30px; bottom: 0; width: 360px; height: 540px; object-fit: contain; transform-origin: 35% 90%; opacity: 0; mask-image: linear-gradient(to bottom,black 83%,transparent 100%); }
+.page-spell.is-casting .page-spell-avatar { animation: wizard-cast 1.9s ease both; }
+@keyframes wizard-cast { 0% { opacity: 0; transform: translateY(18px) rotate(-4deg); } 20% { opacity: 1; } 40% { transform: translateY(0) rotate(1deg); } 65%,100% { opacity: 1; transform: translateY(0) rotate(0); } }
+.page-spell-copy { position: absolute; left: 46%; top: 37%; right: 3%; }
+.page-spell-caption { font: 13px var(--sans,sans-serif); color: #b9baa8; letter-spacing: 2.4px; margin-bottom: 20px; opacity: 0; }
+.page-spell-name { display: block; font: italic 400 clamp(38px,5.5vw,76px)/1.15 var(--serif,Georgia,serif); color: #ead0a0; letter-spacing: -2px; clip-path: inset(0 100% 0 0); padding: 0 12px 12px 0; text-shadow: 0 0 35px #e5bc6040; }
+.page-spell-rule { width: 0; height: 1px; background: linear-gradient(90deg,#ddbd7e,transparent); margin-top: 14px; }
+.page-spell.is-casting .page-spell-caption { animation: spell-caption .4s .2s ease forwards; }
+.page-spell.is-casting .page-spell-name { animation: spell-write .65s .65s ease forwards; }
+.page-spell.is-casting .page-spell-rule { animation: spell-rule .7s .8s ease forwards; }
+@keyframes spell-caption { to { opacity: 1; } }
+@keyframes spell-write { to { clip-path: inset(0 0 0 0); } }
+@keyframes spell-rule { to { width: 85%; } }
+.page-spell-trail { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.page-spell-trail .spell-arc { stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; }
+.page-spell.is-casting .spell-arc { animation: spell-arc 1.3s .35s ease forwards; }
+@keyframes spell-arc { 0% { stroke-dashoffset: 1; opacity: 0; } 20% { opacity: .8; } 70% { stroke-dashoffset: 0; opacity: .75; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+.page-spell-burst { position: absolute; left: 37%; top: 12%; width: 16px; height: 16px; border-radius: 50%; background: #fff3c5; box-shadow: 0 0 15px 5px #f7d28699,0 0 55px 20px #d9ae4c33; transform: scale(0); }
+.page-spell-burst::before, .page-spell-burst::after { content: ''; position: absolute; width: 56px; height: 1px; top: 8px; left: -20px; background: linear-gradient(90deg,transparent,#fff3c5,transparent); }
+.page-spell-burst::after { transform: rotate(90deg); }
+.page-spell.is-casting .page-spell-burst { animation: wand-ignite 1.3s .35s ease forwards; }
+@keyframes wand-ignite { 0% { transform: scale(0); opacity: 0; } 30% { transform: scale(1); opacity: 1; } 65% { transform: scale(.7); opacity: .8; } 100% { transform: scale(.3); opacity: 0; } }
+.spell-mote { position: absolute; color: #e4c285; opacity: 0; font-size: 14px; }
+.page-spell.is-casting .spell-mote { animation: spell-mote 1s ease forwards; animation-delay: var(--delay); }
+@keyframes spell-mote { 0% { opacity: 0; transform: translateY(15px) scale(.4); } 40% { opacity: .8; } 100% { opacity: 0; transform: translateY(-28px) scale(1.1); } }
+.page-spell-bottom { position: absolute; bottom: 35px; left: 25px; right: 25px; text-align: center; color: #b9baa8; font: italic 13px var(--serif,Georgia,serif); }
+.replay-spell { color: var(--gold); background: transparent; border: 0; font: 13px var(--sans,sans-serif); cursor: pointer; padding: 5px 0; text-underline-offset: 4px; }
+.replay-spell:hover { text-decoration: underline; }
+@media(max-width:680px) {
+  .page-spell-topline { top: 23px; left: 22px; right: 22px; }.page-spell-signature { font-size: 13px; }.page-spell-skip { font-size: 13px; padding: 8px 11px; }
+  .page-spell-stage { width: 370px; max-width: 100%; height: 570px; }.page-spell-avatar { left: 18px; bottom: 0; width: 290px; height: 435px; }
+  .page-spell-copy { top: 3%; left: 22px; right: 22px; text-align: center; }.page-spell-caption { margin-bottom: 13px; font-size: 13px; letter-spacing: 2px; }.page-spell-name { font-size: 49px; letter-spacing: -1.6px; padding-inline: 0; }.page-spell-rule { margin: 9px auto 0; }
+  .page-spell-burst { left: 79%; top: 30%; }.page-spell-trail { display: none; }.spell-mote { font-size: 13px; }.page-spell-bottom { bottom: 24px; font-size: 13px; }
+}
+@media(max-height:650px) and (min-width:681px) { .page-spell-stage { transform: scale(.75); }.page-spell-topline { top: 15px; }.page-spell-bottom { bottom: 15px; } }
+@media(max-height:720px) and (max-width:680px) { .page-spell-stage { height: 480px; }.page-spell-avatar { height: 345px; width: 230px; left: 38px; }.page-spell-burst { left: 70%; top: 31%; }.page-spell-name { font-size: 42px; }.page-spell-copy { top: 5%; } }
+@media(prefers-reduced-motion:reduce) { html.spell-pending body::after, .page-spell { display: none !important; } }
+/* Each page has its own illustration, gesture, and spell trajectory.
+   Wand coordinates live in the page configuration and follow the moving figure. */
+.page-spell-figure { position: absolute; left: 30px; bottom: 0; width: 360px; height: 540px; opacity: 0; transform-origin: 50% 90%; }
+.page-spell .page-spell-avatar { position: static; display: block; width: 100%; height: 100%; opacity: 1; mask-image: linear-gradient(to bottom,black 94%,transparent 100%); }
+.page-spell.is-casting .page-spell-avatar { animation: none; }
+.page-spell.is-casting .page-spell-figure { animation: var(--pose-motion,wizard-cast) 1.9s ease both; }
+.page-spell .page-spell-burst { left: var(--wand-x); top: var(--wand-y); width: 12px; height: 12px; margin: -6px 0 0 -6px; }
+.page-spell .page-spell-burst::before, .page-spell .page-spell-burst::after { top: 6px; left: -22px; }
+.page-spell[data-pose="platform"] { --pose-motion: wizard-welcome; }
+.page-spell[data-pose="about"] { --pose-motion: wizard-bow; }
+.page-spell[data-pose="projects"] { --pose-motion: wizard-conjure; }
+.page-spell[data-pose="education"] { --pose-motion: wizard-study; }
+.page-spell[data-pose="credentials"] { --pose-motion: wizard-salute; }
+.page-spell[data-pose="contact"] { --pose-motion: wizard-deliver; }
+.page-spell[data-pose="about"] .spell-arc { stroke-dasharray: .03 .02; }
+.page-spell[data-pose="projects"] .page-spell-burst { box-shadow: 0 0 18px 7px #f7d286aa,0 20px 60px 25px #d9ae4c33; }
+.page-spell[data-pose="education"] .spell-arc { stroke-dasharray: .1 .025; }
+.page-spell[data-pose="credentials"] .page-spell-burst::after { transform: rotate(45deg); }
+.page-spell[data-pose="contact"] .page-spell-rule { background: linear-gradient(90deg,#ddb47e,#b76a5a,transparent); }
+@keyframes wizard-welcome { 0% { opacity: 0; transform: translateX(-30px) rotate(-5deg); } 22% { opacity: 1; } 48% { transform: translateX(0) rotate(2deg); } 75%,100% { opacity: 1; transform: none; } }
+@keyframes wizard-bow { 0% { opacity: 0; transform: translateY(12px) rotate(2deg); } 22% { opacity: 1; transform: translateY(0) rotate(0); } 48% { transform: translateY(5px) rotate(-2deg); } 78%,100% { opacity: 1; transform: none; } }
+@keyframes wizard-conjure { 0% { opacity: 0; transform: translateY(24px) scale(.95); } 22% { opacity: 1; } 50% { transform: translateY(-9px) scale(1.015); } 80%,100% { opacity: 1; transform: none; } }
+@keyframes wizard-study { 0% { opacity: 0; transform: translateX(-14px) rotate(-2deg); } 24% { opacity: 1; } 50% { transform: translateX(0) rotate(1.5deg); } 80%,100% { opacity: 1; transform: none; } }
+@keyframes wizard-salute { 0% { opacity: 0; transform: translateY(25px) scale(.94); } 22% { opacity: 1; } 46% { transform: translateY(-7px) rotate(-2deg) scale(1.025); } 75%,100% { opacity: 1; transform: none; } }
+@keyframes wizard-deliver { 0% { opacity: 0; transform: translateX(-18px) scale(.96); } 22% { opacity: 1; } 55% { transform: translateX(7px) scale(1.025); } 80%,100% { opacity: 1; transform: none; } }
+@media(max-width:680px) { .page-spell-figure { left: 18px; bottom: 0; width: 290px; height: 435px; }.page-spell .page-spell-avatar { width: 100%; height: 100%; } }
+@media(max-height:720px) and (max-width:680px) { .page-spell-figure { height: 345px; width: 230px; left: 38px; } }
+/* Feather the illustration margins so warm rim light blends into the stage. */
+.page-spell .page-spell-avatar {
+  mask-image: linear-gradient(to bottom,transparent 0%,black 5%,black 89%,transparent 100%),linear-gradient(to right,transparent 0%,black 6%,black 94%,transparent 100%);
+  mask-composite: intersect;
+}

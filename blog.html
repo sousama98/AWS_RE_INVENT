@@ -40,10 +40,14 @@
     }
     
     .work-item:nth-child(2) {
+      background: linear-gradient(135deg, #ecfeff 0%, #a5f3fc 100%);
+    }
+
+    .work-item:nth-child(3) {
       background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
     }
     
-    .work-item:nth-child(3) {
+    .work-item:nth-child(4) {
       background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
     }
     
@@ -71,7 +75,7 @@
 
     .mphasis-skills h4 {
       margin: 0 0 0.5rem 0;
-      font-size: 1rem;
+      font-size: 15px;
       color: #0f172a;
     }
 
@@ -113,32 +117,37 @@
       .skill-btn { min-width: 120px; }
     }
   </style>
+    <meta name="theme-color" content="#0c1d19">
+    <link rel="stylesheet" href="enchanted.css">
+    <script src="enchanted.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="assets/illustrations/monogram.svg">
+    <link rel="preload" as="image" media="(prefers-reduced-motion: no-preference)" href="assets/illustrations/sourabrata-wizard.png">
+    <link rel="stylesheet" href="page-spell.css">
+    <script>if (!matchMedia('(prefers-reduced-motion: reduce)').matches) { document.documentElement.classList.add('spell-pending'); setTimeout(() => document.documentElement.classList.remove('spell-pending'), 4000); }</script>
+    <script src="page-spell.js" defer></script>
 </head>
 <body>
-  <div class="animated-bg" id="particleCanvas"></div>
-  <nav>
-    <div class="nav-container">
-      <div class="logo">Sourabrata Samanta</div>
-      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blog.html" class="active">Work</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav aria-label="Main navigation">
+      <div class="nav-container">
+        <a class="brand" href="index.html" aria-label="Sourabrata Samanta, home"><span class="brand-mark" aria-hidden="true">S<span>✦</span></span><span class="brand-name">Sourabrata Samanta<small>A LITTLE LOGIC. A LITTLE MAGIC.</small></span></a>
+        <ul class="nav-menu" id="main-menu"><li><a href="index.html">Home · 9¾</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="blog.html" class="active" aria-current="page">Experience</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="certifications.html">Credentials</a></li>
+<li><a href="interests.html">Interests</a></li>
+<li><a href="contact.html">Contact</a></li></ul>
+        <div class="nav-actions"><button class="light-switch" type="button" aria-pressed="false" aria-label="Switch to parchment theme"><span aria-hidden="true">☼</span> <span class="light-label">Lumos</span></button><button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button></div>
+      </div>
+    </nav>
 
-  <main style="margin-top:70px;">
+  <main id="main-content" tabindex="-1" style="margin-top:70px;">
     <section class="work-hero" style="text-align:center;padding:100px 0 50px;background:linear-gradient(135deg,#0ea5e9 0%,#06b6d4 100%);color:#fff;position:relative;overflow:hidden;">
       <div style="content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);pointer-events:none;"></div>
       <div class="container" style="position:relative;z-index:1;">
-        <h1 style="font-size:3.5rem;margin-bottom:1rem;font-weight:800;letter-spacing:-1px;text-shadow:0 2px 20px rgba(0,0,0,0.1);margin-top:-10px;">Work Experience</h1>
+        <p class="eyebrow">03 / THE JOURNEY</p><h1 style="font-size:3.5rem;margin-bottom:1rem;font-weight:800;letter-spacing:-1px;text-shadow:0 2px 20px rgba(0,0,0,0.1);margin-top:-10px;">Work Experience</h1>
         <p style="opacity:0.95;margin:0;font-size:1.3rem;font-weight:500;letter-spacing:-0.3px;">Experience focused on cloud-native systems, ML/AI engineering, data platforms and product delivery.</p>
       </div>
     </section>
@@ -152,42 +161,76 @@
           </div>
           <div>
             <h3 style="margin:0 0 0.25rem 0;">auntEDNA.ai</h3>
-            <p style="margin:0;font-weight:600;color:#0f172a;">Role: Product Analyst</p>
-            <p style="margin:0.25rem 0;color:#475569;font-size:0.95rem;">Dates: January 2026 - Present</p>
-            <p style="margin:0.5rem 0 0 0;color:#475569;font-size:0.95rem;">
-              At auntEDNA.ai, I drive product strategy and execution for athlete-focused solutions, bridging user needs with technical feasibility to accelerate product-market fit and revenue growth.
+            <p style="margin:0;font-weight:600;color:#0f172a;">Role: Product Manager</p>
+            <p style="margin:0.25rem 0;color:#475569;font-size:15px;">Dates: January 2026 - Present</p>
+            <p style="margin:0.5rem 0 0 0;color:#475569;font-size:15px;">
+              At auntEDNA.ai, I partner with the founder, clinic users, UX, and engineering to shape a B2B SaaS product—from customer discovery and product requirements to backlog prioritization, sprint planning, and launch.
             </p>
             <ul style="margin:0.75rem 0 0 1.15rem;color:#475569">
-              <li>Accelerated 0-1 product delivery by 30%, measured by time from concept to first release, by scoping a focused MVP that balanced athlete needs, website integrity requirements, and engineering feasibility.</li>
-              <li>Developed an end-to-end go-to-market strategy, defining target segment prioritization, pricing logic, and expansion sequencing, outlining a credible revenue scale path from ~$1M to $100M ARR over 5-7 years.</li>
-              <li>Increased early stage athlete satisfaction by 25%, measured through pilot feedback scores and usage consistency, by prioritizing features grounded in real athlete workflows rather than internal assumptions.</li>
+              <li>Partnered directly with the founder and clinic users to turn customer pain points and workflow insights into PRDs, prioritized product capabilities, and launch requirements, reducing time to first release by 30%.</li>
+              <li>Owned product backlog prioritization for a B2B SaaS product, translating roadmap initiatives into user stories and acceptance criteria while sequencing work with engineering for sprint and release planning.</li>
+              <li>Collaborated with UX in Figma to map user journeys and test pilot workflows, using usability feedback and adoption signals to prioritize iterations that increased early adoption by 25%.</li>
             </ul>
           </div>
           <div class="mphasis-skills" aria-hidden="false">
             <h4>Skills used</h4>
             <div class="skill-list">
-              <button class="skill-btn" type="button" onclick="return false;">Product Strategy</button>
-              <button class="skill-btn" type="button" onclick="return false;">Go-to-Market</button>
-              <button class="skill-btn" type="button" onclick="return false;">MVP Development</button>
-              <button class="skill-btn" type="button" onclick="return false;">User Research</button>
-              <button class="skill-btn" type="button" onclick="return false;">Pricing Strategy</button>
-              <button class="skill-btn" type="button" onclick="return false;">Roadmap Planning</button>
-              <button class="skill-btn" type="button" onclick="return false;">Stakeholder Management</button>
-              <button class="skill-btn" type="button" onclick="return false;">Data Analysis</button>
+              <span class="skill-btn">Product Management</span>
+              <span class="skill-btn">PRDs &amp; Requirements</span>
+              <span class="skill-btn">Backlog Prioritization</span>
+              <span class="skill-btn">User Stories &amp; Acceptance Criteria</span>
+              <span class="skill-btn">Sprint &amp; Release Planning</span>
+              <span class="skill-btn">Figma</span>
+              <span class="skill-btn">User Research</span>
+              <span class="skill-btn">Usability Testing</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- RTM Engineering Consultants -->
+        <article id="rtm" class="work-item work-item--with-skills" style="display:grid;gap:1rem;padding:1.25rem;border-radius:10px;border:1px solid rgba(15,23,42,0.04);box-shadow:0 6px 18px rgba(2,6,23,0.04);margin-bottom:1rem;">
+          <div class="logo-wrap" aria-hidden="true">
+            <span style="font-size:1.75rem;font-weight:800;color:#0e7490;">RTM</span>
+          </div>
+          <div>
+            <h3 style="margin:0 0 0.25rem 0;">RTM Engineering Consultants</h3>
+            <p style="margin:0;font-weight:600;color:#0f172a;">Role: Strategy &amp; Operations Analyst</p>
+            <p style="margin:0.25rem 0;color:#475569;font-size:15px;">Dates: July 2026 - September 2026</p>
+            <p style="margin:0.5rem 0 0 0;color:#475569;font-size:15px;">
+              At RTM Engineering Consultants, I improved enterprise financial and operational reporting, strengthened data quality controls, and supported post-acquisition analytics through semantic modeling, dashboards, and data integration.
+            </p>
+            <ul style="margin:0.75rem 0 0 1.15rem;color:#475569">
+              <li>Built and maintained an enterprise Power BI semantic model in Microsoft Fabric, developing DAX measures, calculation groups, and a star schema to consolidate financial and operational data from Deltek Vantagepoint and Snowflake into a single reporting source.</li>
+              <li>Led Project Rubix, investigating a $5M write-off discrepancy across 25+ active projects using SQL and root cause analysis. Traced the issue to recurring null values and built SQL Server validation controls to flag missing data before it reached downstream reporting.</li>
+              <li>Improved reporting usability for Project Managers and Studio Leaders by launching a Power BI dashboard with role-based access to planning and scheduling insights.</li>
+              <li>Led technical discovery and data integration for acquired companies by profiling legacy systems, validating Snowflake datasets with SQL, and mapping source data into standardized reporting models for consistent post-acquisition analytics.</li>
+            </ul>
+          </div>
+          <div class="mphasis-skills" aria-hidden="false">
+            <h4>Skills used</h4>
+            <div class="skill-list">
+              <span class="skill-btn">Power BI</span>
+              <span class="skill-btn">Microsoft Fabric</span>
+              <span class="skill-btn">DAX</span>
+              <span class="skill-btn">SQL Server</span>
+              <span class="skill-btn">Snowflake</span>
+              <span class="skill-btn">Semantic Modeling</span>
+              <span class="skill-btn">Data Integration</span>
+              <span class="skill-btn">Root Cause Analysis</span>
             </div>
           </div>
         </article>
 
         <!-- Mphasis -->
-        <article class="work-item work-item--with-skills" style="display:grid;gap:1rem;padding:1.25rem;border-radius:10px;border:1px solid rgba(15,23,42,0.04);box-shadow:0 6px 18px rgba(2,6,23,0.04);margin-bottom:1rem;">
+        <article id="mphasis" class="work-item work-item--with-skills" style="display:grid;gap:1rem;padding:1.25rem;border-radius:10px;border:1px solid rgba(15,23,42,0.04);box-shadow:0 6px 18px rgba(2,6,23,0.04);margin-bottom:1rem;">
           <div class="logo-wrap">
             <img src="assets/logos/mphasis.png" alt="Mphasis" class="company-logo">
           </div>
           <div>
             <h3 style="margin:0 0 0.25rem 0;">Mphasis</h3>
             <p style="margin:0;font-weight:600;color:#0f172a;">Role: Data Science Intern</p>
-            <p style="margin:0.25rem 0;color:#475569;font-size:0.95rem;">Dates: May 2025 - August 2025</p>
-            <p style="margin:0.5rem 0 0 0;color:#475569;font-size:0.95rem;">
+            <p style="margin:0.25rem 0;color:#475569;font-size:15px;">Dates: May 2025 - August 2025</p>
+            <p style="margin:0.5rem 0 0 0;color:#475569;font-size:15px;">
               At Mphasis, I worked at the intersection of AI engineering, cloud architecture, and data analytics—building production-grade systems that directly supported enterprise Vendor Risk workflows. My primary focus was designing and deploying scalable, high-precision AI solutions using AWS, Python, LLMs, and modern data engineering practices.
             </p>
             <ul style="margin:0.75rem 0 0 1.15rem;color:#475569">
@@ -203,19 +246,19 @@
           <div class="mphasis-skills" aria-hidden="false">
             <h4>Skills used</h4>
             <div class="skill-list">
-              <button class="skill-btn" type="button" onclick="return false;">Python</button>
-              <button class="skill-btn" type="button" onclick="return false;">AWS (S3, EC2, Lambda)</button>
-              <button class="skill-btn" type="button" onclick="return false;">SageMaker</button>
-              <button class="skill-btn" type="button" onclick="return false;">Amazon Bedrock</button>
-              <button class="skill-btn" type="button" onclick="return false;">Hugging Face</button>
-              <button class="skill-btn" type="button" onclick="return false;">LangChain / LangGraph</button>
-              <button class="skill-btn" type="button" onclick="return false;">Titan embeddings</button>
-              <button class="skill-btn" type="button" onclick="return false;">RAG pipelines</button>
-              <button class="skill-btn" type="button" onclick="return false;">Snowflake</button>
-              <button class="skill-btn" type="button" onclick="return false;">Databricks</button>
-              <button class="skill-btn" type="button" onclick="return false;">Power BI / Tableau</button>
-              <button class="skill-btn" type="button" onclick="return false;">Docker / CI-CD</button>
-              <button class="skill-btn" type="button" onclick="return false;">Monitoring & Observability</button>
+              <span class="skill-btn">Python</span>
+              <span class="skill-btn">AWS (S3, EC2, Lambda)</span>
+              <span class="skill-btn">SageMaker</span>
+              <span class="skill-btn">Amazon Bedrock</span>
+              <span class="skill-btn">Hugging Face</span>
+              <span class="skill-btn">LangChain / LangGraph</span>
+              <span class="skill-btn">Titan embeddings</span>
+              <span class="skill-btn">RAG pipelines</span>
+              <span class="skill-btn">Snowflake</span>
+              <span class="skill-btn">Databricks</span>
+              <span class="skill-btn">Power BI / Tableau</span>
+              <span class="skill-btn">Docker / CI-CD</span>
+              <span class="skill-btn">Monitoring & Observability</span>
             </div>
           </div>
         </article>
@@ -228,8 +271,8 @@
           <div>
             <h3 style="margin:0 0 0.25rem 0;">Accenture</h3>
             <p style="margin:0;font-weight:600;color:#0f172a;">Role: Consultant / Full Stack Engineering</p>
-            <p style="margin:0.25rem 0;color:#475569;font-size:0.95rem;">Dates: May 2021 - April 2024</p>
-            <p style="margin:0.5rem 0 0 0;color:#475569;font-size:0.95rem;">
+            <p style="margin:0.25rem 0;color:#475569;font-size:15px;">Dates: May 2021 - April 2024</p>
+            <p style="margin:0.5rem 0 0 0;color:#475569;font-size:15px;">
               At Accenture, I operated as a full-stack engineer building scalable, production-grade applications that powered enterprise clients across operations, analytics, and cloud. My role blended UI engineering, backend development, data analytics, and cloud modernization—with a heavy focus on reliability, performance, and measurable business impact.
             </p>
             <ul style="margin:0.75rem 0 0 1.15rem;color:#475569">
@@ -244,65 +287,34 @@
           <div class="mphasis-skills" aria-hidden="false">
             <h4>Skills used</h4>
             <div class="skill-list">
-              <button class="skill-btn" type="button" onclick="return false;">Angular</button>
-              <button class="skill-btn" type="button" onclick="return false;">TypeScript</button>
-              <button class="skill-btn" type="button" onclick="return false;">HTML/CSS</button>
-              <button class="skill-btn" type="button" onclick="return false;">Python</button>
-              <button class="skill-btn" type="button" onclick="return false;">REST APIs</button>
-              <button class="skill-btn" type="button" onclick="return false;">AWS</button>
-              <button class="skill-btn" type="button" onclick="return false;">Azure</button>
-              <button class="skill-btn" type="button" onclick="return false;">Docker</button>
-              <button class="skill-btn" type="button" onclick="return false;">Git / GitHub</button>
-              <button class="skill-btn" type="button" onclick="return false;">CI/CD pipelines</button>
-              <button class="skill-btn" type="button" onclick="return false;">SQL</button>
-              <button class="skill-btn" type="button" onclick="return false;">Power BI</button>
-              <button class="skill-btn" type="button" onclick="return false;">Tableau</button>
-              <button class="skill-btn" type="button" onclick="return false;">Databricks</button>
-              <button class="skill-btn" type="button" onclick="return false;">Jira / Confluence</button>
-              <button class="skill-btn" type="button" onclick="return false;">Kubernetes</button>
-              <button class="skill-btn" type="button" onclick="return false;">Scikit-learn</button>
-              <button class="skill-btn" type="button" onclick="return false;">Regression Analysis</button>
-              <button class="skill-btn" type="button" onclick="return false;">KPI Modeling</button>
+              <span class="skill-btn">Angular</span>
+              <span class="skill-btn">TypeScript</span>
+              <span class="skill-btn">HTML/CSS</span>
+              <span class="skill-btn">Python</span>
+              <span class="skill-btn">REST APIs</span>
+              <span class="skill-btn">AWS</span>
+              <span class="skill-btn">Azure</span>
+              <span class="skill-btn">Docker</span>
+              <span class="skill-btn">Git / GitHub</span>
+              <span class="skill-btn">CI/CD pipelines</span>
+              <span class="skill-btn">SQL</span>
+              <span class="skill-btn">Power BI</span>
+              <span class="skill-btn">Tableau</span>
+              <span class="skill-btn">Databricks</span>
+              <span class="skill-btn">Jira / Confluence</span>
+              <span class="skill-btn">Kubernetes</span>
+              <span class="skill-btn">Scikit-learn</span>
+              <span class="skill-btn">Regression Analysis</span>
+              <span class="skill-btn">KPI Modeling</span>
             </div>
           </div>
         </article>
 
       </div>
     </section>
-  </main>
+  <div class="container chapter-next"><span>THE NEXT CHAPTER</span><a href="education.html">Education <span aria-hidden="true">↗</span></a><a class="back-platform" href="index.html#journey">Return to the journey map</a></div>
+    </main>
 
-  <footer>
-    <div class="container" style="text-align:center;padding:28px 0;color:#64748b;">
-      <p>&copy; 2025 Sourabrata Samanta. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    function toggleMobileMenu() {
-      const navMenu = document.querySelector('.nav-menu');
-      const toggle = document.querySelector('.mobile-menu-toggle');
-      if (!navMenu || !toggle) return;
-      navMenu.classList.toggle('active');
-      toggle.classList.toggle('active');
-    }
-
-    function createParticles() {
-      const container = document.getElementById('particleCanvas');
-      const particleCount = 15;
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        const size = Math.random() * 60 + 20;
-        particle.style.width = size + 'px';
-        particle.style.height = size + 'px';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 20 + 's';
-        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-        container.appendChild(particle);
-      }
-    }
-    createParticles();
-  </script>
+  <footer><div class="container footer-inner"><a class="footer-brand" href="index.html">Sourabrata Samanta <span>✦</span></a><p>Built with curiosity. Finished with a little magic.</p><a href="contact.html">Let’s create something ↗</a><small>© 2026 Sourabrata Samanta</small></div></footer>
 </body>
 </html>
